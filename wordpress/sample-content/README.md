@@ -1,6 +1,6 @@
 # Sample content
 
-The **Front Page** template in the theme already contains the recruiter homepage (published template, not a draft).
+The **Front Page** template is the recruiter homepage (About / Experience / Work / Resume / Contact). Dedicated pages in the XML (About, Experience, Work, Resume, Contact) are all `publish`, not draft.
 
 `preet-desai-recruiter.xml` is optional. Import it only if you want a **Published** WordPress page you can assign later:
 

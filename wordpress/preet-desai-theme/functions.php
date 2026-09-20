@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'PREET_DESAI_VERSION', '1.0.0' );
+define( 'PREET_DESAI_VERSION', '1.1.0' );
 
 /**
  * Theme setup.
@@ -247,15 +247,23 @@ function preet_desai_recruiting_widget_render() {
 
 	$items[] = array(
 		'ok'   => true,
-		'text' => __( 'Replace banner, headshot, achievement, and project images in the Site Editor (Media → Replace).', 'preet-desai' ),
+		'text' => __( 'About stack is name / role / school (CMU Heinz MSISPM) plus Cyber · Risk · GRC.', 'preet-desai' ),
 	);
 	$items[] = array(
 		'ok'   => true,
-		'text' => __( 'Click each Connect card and confirm the modal copy plus destination URL.', 'preet-desai' ),
+		'text' => __( 'Replace the Resume button URL with a Media Library PDF when you have one. Applications use https://preet-desai.me only.', 'preet-desai' ),
 	);
 	$items[] = array(
 		'ok'   => true,
-		'text' => __( 'Styles → Colors / Typography / Layout to change formatting without code. SOP: wordpress/SOP-EDITING.md', 'preet-desai' ),
+		'text' => __( 'Replace headshot, achievement, and project images (Media → Replace).', 'preet-desai' ),
+	);
+	$items[] = array(
+		'ok'   => true,
+		'text' => __( 'Check Work featured cards and each Contact modal URL.', 'preet-desai' ),
+	);
+	$items[] = array(
+		'ok'   => true,
+		'text' => __( 'What Preet does: wordpress/SOP-EDITING.md (student-portfolio checklist).', 'preet-desai' ),
 	);
 
 	echo '<ul style="margin:0;padding-left:1.2rem;">';

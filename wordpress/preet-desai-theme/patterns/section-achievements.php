@@ -16,7 +16,7 @@
 			<!-- wp:group {"layout":{"type":"constrained"}} -->
 			<div class="wp-block-group">
 				<!-- wp:paragraph {"className":"is-style-pd-kicker"} -->
-				<p class="is-style-pd-kicker">03 — Active achievements</p>
+				<p class="is-style-pd-kicker">Achievements</p>
 				<!-- /wp:paragraph -->
 				<!-- wp:heading {"level":2} -->
 				<h2 class="wp-block-heading">Selected work &amp; participation</h2>

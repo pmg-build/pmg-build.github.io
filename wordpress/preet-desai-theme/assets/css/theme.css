@@ -128,8 +128,37 @@ header.wp-block-template-part {
 	text-decoration: none;
 }
 
+/* Identity (student-portfolio hierarchy: name → role → school) */
+.pd-identity-role {
+	margin: 0 0 0.2rem;
+	font-size: clamp(1.15rem, 2vw, 1.4rem);
+	font-weight: 600;
+	letter-spacing: -0.02em;
+	color: var(--wp--preset--color--contrast);
+}
+.pd-identity-school {
+	margin: 0 0 0.2rem;
+	font-size: 1.05rem;
+	font-weight: 500;
+	color: var(--wp--preset--color--accent);
+}
+.pd-identity-focus {
+	margin: 0 0 0.75rem;
+	font-size: 0.95rem;
+	font-weight: 500;
+	letter-spacing: 0.04em;
+	color: var(--wp--preset--color--muted);
+}
+
+.pd-feature-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 1rem;
+	margin-bottom: 1.5rem;
+}
+
 /* Hero */
-.pd-hero { position: relative; padding: 2.5rem 0 1rem; }
+.pd-hero { position: relative; padding: 2rem 0 0.5rem; }
 
 .pd-banner,
 .pd-banner.wp-block-cover,
@@ -148,13 +177,14 @@ header.wp-block-template-part {
 	opacity: 0.85;
 }
 
-.pd-hero-card {
-	margin-top: -64px;
+.pd-hero-card,
+.pd-identity {
+	margin-top: 0;
 	display: grid;
 	grid-template-columns: auto 1fr;
-	gap: 1.5rem;
-	align-items: end;
-	padding: 0 1rem;
+	gap: 1.75rem;
+	align-items: start;
+	padding: 0;
 }
 
 .pd-headshot,
@@ -181,11 +211,11 @@ figure.pd-headshot img {
 }
 
 .pd-hero-copy h1,
-.pd-hero-copy .wp-block-heading {
+.pd-hero-copy .wp-block-heading:first-of-type {
 	margin: 0 0 0.35rem;
-	font-size: clamp(1.85rem, 3.5vw, 2.55rem);
-	letter-spacing: -0.03em;
-	line-height: 1.15;
+	font-size: clamp(2rem, 4.2vw, 3rem);
+	letter-spacing: -0.04em;
+	line-height: 1.08;
 }
 
 .pd-headline,
@@ -580,8 +610,10 @@ footer.wp-block-template-part,
 @media (max-width: 900px) {
 	.pd-grid-3,
 	.pd-achievement-grid,
-	.pd-connect-grid { grid-template-columns: 1fr 1fr; }
-	.pd-hero-card { grid-template-columns: 1fr; align-items: start; margin-top: -48px; }
+	.pd-connect-grid,
+	.pd-feature-grid { grid-template-columns: 1fr 1fr; }
+	.pd-hero-card,
+	.pd-identity { grid-template-columns: 1fr; align-items: start; margin-top: 0; }
 	.pd-headshot-wrap,
 	figure.pd-headshot,
 	.pd-headshot,
@@ -599,6 +631,7 @@ footer.wp-block-template-part,
 	.pd-education-grid,
 	.pd-achievement-grid,
 	.pd-connect-grid,
+	.pd-feature-grid,
 	.pd-diagram-row { grid-template-columns: 1fr; }
 	.pd-section-head { flex-direction: column; align-items: start; }
 	.pd-nav-links { gap: 0.35rem 0.75rem; }

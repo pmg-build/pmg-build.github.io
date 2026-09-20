@@ -12,14 +12,18 @@ Recruiter-first block theme. Edit every section, card, image, and Connect modal 
 
 WordPress is the source of truth for formatting and content.
 
-* Front Page template is the public recruiter homepage (published template, no Draft badge).
-* theme.json tokens: colors, typography, spacing, shadows.
-* Patterns: experience / education / achievement / project cards and platform-specific Connect modals.
-* Dashboard widget: Recruiting-ready checklist.
+* Front Page: About / Experience / Work / Resume / Contact (published template, no Draft badge).
+* Identity stack: name, role, school, interests.
+* theme.json tokens: Name, Role, School sizes plus colors and spacing.
+* Patterns: featured research/projects, cards, platform Contact modals, dedicated page patterns.
+* Dashboard widget + SOP “What Preet does” checklist.
 
 See wordpress/SOP-EDITING.md in the site repository.
 
 == Changelog ==
+
+= 1.1.0 =
+* Student-portfolio structure and identity hierarchy.
 
 = 1.0.0 =
 * Initial recruiter block theme.

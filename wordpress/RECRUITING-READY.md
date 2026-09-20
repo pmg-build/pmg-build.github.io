@@ -1,15 +1,14 @@
 # Recruiting-ready checklist
 
-Use this before sending the site to a hiring officer. Nothing here is shown on the public homepage.
+Use this before sending `https://preet-desai.me` to a hiring officer. Nothing here is shown on the public homepage.
 
-- [ ] Theme **Preet Desai** is active.
-- [ ] Public homepage is **Appearance → Editor → Templates → Front Page** (Save). Do not assign a **Draft** page under Settings → Reading.
-- [ ] No page or post titled or stamped “DRAFT” is in the recruiter flow.
-- [ ] Banner, headshot, achievement photos, and project diagrams are uploaded (Replace on each block).
-- [ ] Experience, education, achievements, projects, skills, and Connect still match Preet’s own copy — do not invent roles or metrics.
-- [ ] Each Connect modal title/body is correct; each Open URL works (LinkedIn, Instagram, YouTube, BLOOM).
-- [ ] Mobile: nav links wrap and remain visible; cards stack; buttons stay at least 44px tall.
-- [ ] Skip link and modal Close / Escape work with a keyboard.
-- [ ] Site URL / canonical you want hiring officers to share is `https://preet-desai.me` (domain HTTPS is Preet’s task).
+- [ ] Theme **Preet Desai** is active; Front Page is Saved (not a Draft reading page).
+- [ ] About stack is name / role / school / Cyber · Risk · GRC — scannable in five seconds.
+- [ ] Nav is About, Experience, Work, Resume, Contact.
+- [ ] Resume button points at `#resume` or a published PDF; applications use only `https://preet-desai.me`.
+- [ ] Work callouts and cards still use Preet’s own copy (Sensonics, BLOOM, Linux monitor, Marketplace Risk NYC).
+- [ ] Headshot, achievement photos, and diagrams replaced. No “DRAFT” in the recruiter flow.
+- [ ] Connect URLs work. Mobile nav stays visible. Contrast left on default tokens.
+- [ ] Domain HTTPS is handled by Preet (not this theme).
 
-The same list appears on the wp-admin dashboard widget **Recruiting-ready checklist**.
+Aligned to [student portfolio examples](https://www.sitebuilderreport.com/inspiration/student-portfolio-examples).

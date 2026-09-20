@@ -46,12 +46,14 @@
 				{ "slug": "kicker", "size": "0.78rem", "name": "Kicker" },
 				{ "slug": "small", "size": "0.88rem", "name": "Small" },
 				{ "slug": "medium", "size": "1rem", "name": "Medium" },
+				{ "slug": "role", "size": "1.25rem", "name": "Role" },
+				{ "slug": "school", "size": "1.05rem", "name": "School" },
 				{ "slug": "section", "size": "1.45rem", "name": "Section" },
 				{
 					"slug": "large",
-					"size": "1.85rem",
-					"name": "Large",
-					"fluid": { "min": "1.85rem", "max": "2.55rem" }
+					"size": "2rem",
+					"name": "Name",
+					"fluid": { "min": "2rem", "max": "3rem" }
 				}
 			]
 		},

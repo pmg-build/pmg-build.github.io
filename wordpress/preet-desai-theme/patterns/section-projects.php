@@ -16,7 +16,7 @@
 			<!-- wp:group {"layout":{"type":"constrained"}} -->
 			<div class="wp-block-group">
 				<!-- wp:paragraph {"className":"is-style-pd-kicker"} -->
-				<p class="is-style-pd-kicker">04 — Projects</p>
+				<p class="is-style-pd-kicker">Projects</p>
 				<!-- /wp:paragraph -->
 				<!-- wp:heading {"level":2} -->
 				<h2 class="wp-block-heading">Projects</h2>
