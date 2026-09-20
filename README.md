@@ -10,7 +10,8 @@ GitHub Pages also serves the same files at https://pmg-build.github.io. The cust
 
 ## What’s on the site
 
-- About, experience, projects/achievements, education, skills, contact
+- About (rewritten for hiring officers) with a personal photo collage — swap `assets/life-01.jpg`–`life-03.jpg`
+- Experience, projects/achievements, education, skills, contact
 - Resume page (`resume.html`) and PDF link (`resume.pdf`)
 - Projects: BLOOM (Heinz / Replit Buildathon) and Linux Live System Resource Monitor, plus Marketplace Risk NYC attendance
 - Socials: LinkedIn, Instagram `@pmg.preet`, YouTube `@pmg-preet`, BLOOM
