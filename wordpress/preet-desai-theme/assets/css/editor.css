@@ -1,0 +1,29 @@
+/**
+ * Site Editor / block canvas polish so cards and modals match the public site.
+ */
+.editor-styles-wrapper {
+	background:
+		radial-gradient(1200px 600px at 10% -10%, rgba(56, 189, 248, 0.18), transparent 55%),
+		radial-gradient(900px 500px at 90% 0%, rgba(34, 211, 238, 0.10), transparent 50%),
+		var(--wp--preset--color--base, #0b1220);
+	color: var(--wp--preset--color--contrast, #e8eef9);
+	font-family: var(--wp--preset--font-family--inter);
+}
+
+.editor-styles-wrapper .pd-modal {
+	position: relative;
+	inset: auto;
+	display: flex;
+	background: rgba(2, 6, 23, 0.35);
+	margin-top: 0.75rem;
+}
+
+.editor-styles-wrapper .pd-modal[hidden] {
+	display: flex;
+}
+
+.editor-styles-wrapper .pd-connect-item {
+	border: 1px dashed rgba(56, 189, 248, 0.28);
+	border-radius: 18px;
+	padding: 0.4rem;
+}

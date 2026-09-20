@@ -1,0 +1,17 @@
+/*
+Theme Name: Preet Desai
+Theme URI: https://preet-desai.me
+Author: Preet Desai
+Author URI: https://preet-desai.me
+Description: Recruiter-first block theme for Preet Desai’s cyber and risk portfolio. Every section, card, image, and Connect modal is editable in the WordPress Site Editor.
+Requires at least: 6.6
+Tested up to: 6.7
+Requires PHP: 7.4
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: preet-desai
+Tags: block-theme, full-site-editing, one-page, portfolio, accessibility-ready, custom-colors, custom-typography
+*/
+
+/* Front-end styles live in assets/css/theme.css (enqueued from functions.php). */
