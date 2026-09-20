@@ -6,7 +6,7 @@ const toggle = document.querySelector(".nav-toggle");
 function setNav(open) {
   nav.classList.toggle("open", open);
   toggle.setAttribute("aria-expanded", String(open));
-  toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  toggle.textContent = open ? "Close" : "Menu";
 }
 
 if (toggle && nav) {

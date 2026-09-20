@@ -71,26 +71,14 @@ a:hover { text-decoration-thickness: 2px; }
 
 .nav-toggle {
   display: none;
-  width: 44px;
-  height: 44px;
+  min-height: 44px;
+  padding: 0 0.25rem;
   border: 0;
   background: transparent;
-  padding: 0;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 600;
   cursor: pointer;
-}
-.nav-toggle span {
-  display: block;
-  width: 20px;
-  height: 2px;
-  margin: 6px auto;
-  background: var(--ink);
-  transition: transform 0.15s ease;
-}
-.nav-toggle[aria-expanded="true"] span:first-child {
-  transform: translateY(4px) rotate(45deg);
-}
-.nav-toggle[aria-expanded="true"] span:last-child {
-  transform: translateY(-4px) rotate(-45deg);
 }
 
 .site-nav {
