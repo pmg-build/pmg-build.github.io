@@ -80,9 +80,17 @@ a:hover { text-decoration-thickness: 2px; }
 }
 .nav-toggle span {
   display: block;
-  height: 1.5px;
-  margin: 7px 10px;
+  width: 20px;
+  height: 2px;
+  margin: 6px auto;
   background: var(--ink);
+  transition: transform 0.15s ease;
+}
+.nav-toggle[aria-expanded="true"] span:first-child {
+  transform: translateY(4px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] span:last-child {
+  transform: translateY(-4px) rotate(-45deg);
 }
 
 .site-nav {
@@ -309,6 +317,8 @@ section {
 .diagrams figure { margin: 0; }
 .diagrams img {
   width: 100%;
+  max-height: 280px;
+  object-fit: contain;
   background: var(--surface);
   border: 1px solid var(--line);
 }
@@ -420,7 +430,7 @@ section {
     grid-template-columns: 1fr;
   }
   .timeline > li { gap: 0.35rem; }
-  .headshot { width: 160px; }
+  .headshot { width: 200px; }
 }
 
 @media (max-width: 720px) {
