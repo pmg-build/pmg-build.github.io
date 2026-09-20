@@ -22,4 +22,6 @@ Short checklist only Preet can finish in GitHub / hosting settings.
    - `assets/life-01.jpg` — campus / Heinz (currently the collaboration photo)
    - `assets/life-02.jpg` — presenting / achievement (currently BLOOM Buildathon)
    - `assets/life-03.jpg` — portrait (currently the outdoor headshot)
-   Files dropped in `uploads/` are not used until copied over these names.
+   Preferred Instagram drop-ins if present in `uploads/`:
+   `achieve-01.jpg`, `achieve-02.jpg`, `travel-01.jpg`, `travel-02.jpg`, `leadership-01.jpg`.
+   Copy those over the `life-0N.jpg` names (or add extra slots) before they appear on the site.
