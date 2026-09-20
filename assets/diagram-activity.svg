@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520" role="img" aria-labelledby="actTitle actDesc">
+  <title id="actTitle">Linux Live System Resource Monitor — activity diagram</title>
+  <desc id="actDesc">Program start, parallel views of CPU, memory, network, and disk data, then process running state.</desc>
+  <rect width="880" height="520" fill="#FFFCF7"/>
+  <circle cx="440" cy="28" r="9" fill="#1C1916"/>
+  <line x1="440" y1="37" x2="440" y2="62" stroke="#1C1916" stroke-width="1.3"/>
+  <rect x="310" y="62" width="260" height="46" rx="23" fill="#FFFCF7" stroke="#1C1916" stroke-width="1.4"/>
+  <text x="440" y="91" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#1C1916">Start program</text>
+  <line x1="440" y1="108" x2="440" y2="150" stroke="#1C1916" stroke-width="1.3"/>
+  <line x1="120" y1="150" x2="760" y2="150" stroke="#1C1916" stroke-width="1.3"/>
+  <line x1="120" y1="150" x2="120" y2="172" stroke="#1C1916" stroke-width="1.3"/>
+  <line x1="333" y1="150" x2="333" y2="172" stroke="#1C1916" stroke-width="1.3"/>
+  <line x1="547" y1="150" x2="547" y2="172" stroke="#1C1916" stroke-width="1.3"/>
+  <line x1="760" y1="150" x2="760" y2="172" stroke="#1C1916" stroke-width="1.3"/>
+  <rect x="40" y="172" width="160" height="70" rx="22" fill="#FFFCF7" stroke="#1C1916" stroke-width="1.4"/>
+  <text x="120" y="202" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#1C1916">View CPU</text>
+  <text x="120" y="220" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#1C1916">data</text>
+  <rect x="253" y="172" width="160" height="70" rx="22" fill="#FFFCF7" stroke="#1C1916" stroke-width="1.4"/>
+  <text x="333" y="202" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#1C1916">View memory</text>
+  <text x="333" y="220" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#1C1916">data</text>
+  <rect x="467" y="172" width="160" height="70" rx="22" fill="#FFFCF7" stroke="#1C1916" stroke-width="1.4"/>
+  <text x="547" y="202" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#1C1916">View network</text>
+  <text x="547" y="220" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#1C1916">data</text>
+  <rect x="680" y="172" width="160" height="70" rx="22" fill="#FFFCF7" stroke="#1C1916" stroke-width="1.4"/>
+  <text x="760" y="202" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#1C1916">View disk</text>
+  <text x="760" y="220" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#1C1916">data</text>
+  <line x1="120" y1="242" x2="120" y2="300" stroke="#1C1916" stroke-width="1.3"/>
+  <line x1="333" y1="242" x2="333" y2="300" stroke="#1C1916" stroke-width="1.3"/>
+  <line x1="547" y1="242" x2="547" y2="300" stroke="#1C1916" stroke-width="1.3"/>
+  <line x1="760" y1="242" x2="760" y2="300" stroke="#1C1916" stroke-width="1.3"/>
+  <line x1="120" y1="300" x2="760" y2="300" stroke="#1C1916" stroke-width="1.3"/>
+  <line x1="440" y1="300" x2="440" y2="332" stroke="#1C1916" stroke-width="1.3"/>
+  <rect x="300" y="332" width="280" height="52" rx="26" fill="#FFFCF7" stroke="#1C1916" stroke-width="1.4"/>
+  <text x="440" y="364" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#1C1916">View process running</text>
+  <line x1="440" y1="384" x2="440" y2="430" stroke="#1C1916" stroke-width="1.3"/>
+  <circle cx="440" cy="448" r="16" fill="none" stroke="#1C1916" stroke-width="2"/>
+  <circle cx="440" cy="448" r="8" fill="#1C1916"/>
+</svg>
