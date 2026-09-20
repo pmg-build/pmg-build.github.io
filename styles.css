@@ -163,7 +163,7 @@ section {
 }
 .life-slot-2 {
   background-image: var(--life-2, url("assets/life-02.jpg"));
-  background-position: center 28%;
+  background-position: 8% 72%;
 }
 .life-slot-3 {
   background-image: var(--life-3, url("assets/life-03.jpg"));
