@@ -38,11 +38,6 @@ const previews = {
     platform: "YouTube",
     title: "@pmg-preet",
     desc: "Open the YouTube channel in a new tab."
-  },
-  bloom: {
-    platform: "BLOOM",
-    title: "Keep growing",
-    desc: "Buildathon product site presented at CMU Heinz / Replit."
   }
 };
 

@@ -11,11 +11,11 @@ Short checklist only Preet can finish in GitHub / hosting settings.
 2. **Enforce HTTPS**  
    Settings → Pages → Custom domain `preet-desai.me` → check **Enforce HTTPS**.
 
-3. **Upload the real resume PDF**  
-   Replace `resume.pdf` with the current resume (same filename so the site links keep working). Until then the file is a generated placeholder from the public site facts.
+3. **Resume PDF**  
+   `resume.pdf` is the current Word export. Replace that filename to refresh Download PDF / Resume PDF links.
 
-4. **Optional assets**  
-   Confirm the BLOOM URL (`https://bloom-keepgrowing.vercel.app` returned 404 when checked).
+4. **BLOOM product URL**  
+   The old Vercel app (`bloom-keepgrowing.vercel.app`) 404s and is no longer linked. Add a new URL on the BLOOM project only if one is live.
 
 5. **Personal photo slots (About collage)**  
    Instagram stills from `@pmg.preet` are in place. Replace the same filenames to refresh the rail; overlay CSS stays.

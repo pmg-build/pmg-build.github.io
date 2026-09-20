@@ -13,8 +13,8 @@ GitHub Pages also serves the same files at https://pmg-build.github.io. The cust
 - About (rewritten for hiring officers) with an Instagram travel/achievement collage (`assets/achieve-*.jpg`, `travel-*.jpg`, `leadership-01.jpg`)
 - Experience, projects/achievements, education, skills, contact
 - Resume page (`resume.html`) and PDF link (`resume.pdf`)
-- Projects: BLOOM (Heinz / Replit Buildathon) and Linux Live System Resource Monitor, plus Marketplace Risk NYC attendance
-- Socials: LinkedIn, Instagram `@pmg.preet`, YouTube `@pmg-preet`, BLOOM
+- Projects: BLOOM (Heinz / Replit Buildathon, top 6; no broken product URL) and Linux Live System Resource Monitor, plus Marketplace Risk attendance
+- Socials: LinkedIn, Instagram `@pmg.preet`, YouTube `@pmg-preet`
 
 ## Tech stack
 

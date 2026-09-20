@@ -19,7 +19,7 @@
       background: var(--bg);
       color: var(--ink);
       font-family: "Source Sans 3", "Segoe UI", sans-serif;
-      line-height: 1.5;
+      line-height: 1.45;
     }
     .bar {
       display: flex;
@@ -38,26 +38,72 @@
       padding: 2rem 2.1rem;
       border: 1px solid var(--line);
     }
-    h1 { margin: 0; font-size: 2rem; letter-spacing: -0.02em; }
-    .sub { margin: 0.35rem 0 0; color: var(--muted); }
-    .links { margin: 0.7rem 0 0; font-size: 0.95rem; }
+    header.identity { text-align: center; }
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: -0.02em;
+    }
+    .contact {
+      margin: 0.45rem 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .contact a { color: inherit; }
     h2 {
-      margin: 1.4rem 0 0.4rem;
-      font-size: 0.82rem;
-      letter-spacing: 0.08em;
+      margin: 1.25rem 0 0.35rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       border-bottom: 1px solid var(--ink);
-      padding-bottom: 0.2rem;
+      padding-bottom: 0.18rem;
     }
-    h3 { margin: 0.85rem 0 0.15rem; font-size: 1.02rem; }
-    p, li { margin: 0.2rem 0; }
-    ul { margin: 0.2rem 0 0; padding-left: 1.15rem; }
-    .row { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    h3 { margin: 0; font-size: 1.02rem; }
+    p, li { margin: 0.15rem 0; }
+    ul { margin: 0.15rem 0 0; padding-left: 1.15rem; }
+    .item { margin-top: 0.7rem; }
+    .row { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; }
     .muted { color: var(--muted); }
+    .degree { margin: 0.1rem 0 0; }
+    .projects li { margin-bottom: 0.28rem; }
+    .skills p { margin: 0.25rem 0; }
+    @media (max-width: 640px) {
+      .row { flex-direction: column; gap: 0.1rem; }
+      main { padding: 1.35rem 1.15rem; }
+    }
+    @page {
+      size: letter;
+      margin: 0.55in 0.65in;
+    }
     @media print {
-      .bar { display: none; }
-      body { background: #fff; }
-      main { border: 0; margin: 0; width: auto; padding: 0; }
+      .bar { display: none !important; }
+      html, body {
+        background: #fff;
+        color: #000;
+        font-size: 10.5pt;
+        line-height: 1.32;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      main {
+        border: 0;
+        margin: 0;
+        width: auto;
+        max-width: none;
+        padding: 0;
+        background: #fff;
+      }
+      a { color: inherit; text-decoration: none; }
+      h1 { font-size: 18pt; }
+      h2 {
+        margin-top: 10pt;
+        font-size: 9.5pt;
+        page-break-after: avoid;
+      }
+      h3 { font-size: 11pt; }
+      .item, .skills p { page-break-inside: avoid; }
+      .contact { font-size: 9.5pt; }
+      ul { orphans: 3; widows: 3; }
     }
   </style>
 </head>
@@ -70,54 +116,117 @@
     </div>
   </div>
   <main>
-    <h1>Preet Desai</h1>
-    <p class="sub">CMU Heinz MSISPM · Cyber, risk, and GRC · Open to Summer 2027 internships</p>
-    <p class="links">Morris Plains, NJ · <a href="https://preet-desai.me">preet-desai.me</a> · <a href="https://www.linkedin.com/in/preet-desai26">linkedin.com/in/preet-desai26</a></p>
+    <header class="identity">
+      <h1>Preet Desai</h1>
+      <p class="contact">
+        <a href="mailto:preetd2026@gmail.com">preetd2026@gmail.com</a>
+        · <a href="tel:+18622605984">862-260-5984</a>
+        · <a href="https://www.linkedin.com/in/preet-desai26">linkedin.com/in/preet-desai26</a>
+        · <a href="https://preet-desai.me">preet-desai.me</a>
+      </p>
+    </header>
 
     <h2>Education</h2>
-    <div class="row"><h3>Carnegie Mellon University — Heinz College</h3><span class="muted">Aug 2026 – May 2028</span></div>
-    <p>M.S. Information Security Policy &amp; Management (MSISPM) ’28 · Pittsburgh, PA</p>
-    <p class="muted">Focus: cybersecurity governance, policy, and risk management. Coursework includes Information Security Management, Economic Analysis, and Intro to Cyber Intelligence.</p>
-    <div class="row"><h3>Rowan University — John H. Martinson Honors College</h3><span class="muted">Sep 2023 – May 2026</span></div>
-    <p>B.S. Computer Science · Magna Cum Laude · GPA 3.7 · Glassboro, NJ</p>
-    <p class="muted">Completed in three years. Coursework: Programming Languages, Software Engineering, Data Mining with Pandas.</p>
+    <div class="item">
+      <div class="row">
+        <h3>Carnegie Mellon University — Heinz College</h3>
+        <span class="muted">August 2026 – May 2028</span>
+      </div>
+      <p class="degree">Master of Science in Information Security Policy &amp; Management (MSISPM) · Pittsburgh, PA</p>
+      <ul>
+        <li>Relevant coursework: Information Security Management, Economics, Management Consulting</li>
+      </ul>
+    </div>
+    <div class="item">
+      <div class="row">
+        <h3>Rowan University — John H. Martinson Honors College</h3>
+        <span class="muted">September 2023 – May 2026</span>
+      </div>
+      <p class="degree">Bachelor of Science in Computer Science · Magna Cum Laude · GPA 3.7 · Glassboro, NJ</p>
+      <ul>
+        <li>Relevant coursework: Programming Languages, Software Engineering, Data Mining with Pandas</li>
+      </ul>
+    </div>
+    <div class="item">
+      <div class="row">
+        <h3>County College of Morris</h3>
+        <span class="muted">September 2021 – May 2023</span>
+      </div>
+      <p class="degree">Cybersecurity Information Protection Program · GPA 3.7 · Randolph, NJ</p>
+      <ul>
+        <li>Relevant coursework: Network Security, Penetration Testing, Ethical Hacking and System Defense, Cyberwarfare</li>
+      </ul>
+    </div>
 
-    <h2>Experience</h2>
-    <div class="row"><h3>Werbel Microwave — Software Engineering Co-Op</h3><span class="muted">Jan 2026 – Present</span></div>
-    <p class="muted">Whippany, NJ (Remote)</p>
-    <ul>
-      <li>Applied system administration protocols via Vanta, reducing exposure from unknown actors targeting denial-of-service risk.</li>
-      <li>Implemented honeypots to disrupt botnet activity and improve visibility into malicious traffic.</li>
-      <li>Optimized cross-team workflow between Engineering, Testing, and Sales.</li>
-    </ul>
-    <div class="row"><h3>Sensonics International — Research &amp; Development Intern</h3><span class="muted">May 2025 – Oct 2025</span></div>
-    <p class="muted">Haddon Heights, NJ</p>
-    <ul>
-      <li>Managed 30+ research projects in Jira and automated shipping workflows with a JavaScript bookmarklet.</li>
-      <li>Analyzed deployment testing for consistent, auditable dataset collection across 100+ demographic groups.</li>
-      <li>Attended SSIB 2025 at Oxford University with the Sensonics team.</li>
-    </ul>
-    <div class="row"><h3>Werbel Microwave — Computer Science Specialist</h3><span class="muted">Feb 2024 – Jul 2024</span></div>
-    <ul>
-      <li>Maintained document control, logged 450+ inventory items with JavaScript tooling, and automated tracking in Zoho CRM.</li>
-    </ul>
-    <div class="row"><h3>Werbel Microwave — Test Technician</h3><span class="muted">Feb 2023 – Aug 2023</span></div>
-    <ul>
-      <li>Performed threat analysis on 450+ RF components and created instant CAPA ticketing with Excel macros.</li>
-    </ul>
+    <h2>Professional Experience</h2>
+    <div class="item">
+      <div class="row">
+        <h3>Werbel Microwave — Software Engineering Co-Op</h3>
+        <span class="muted">January 2026 – Present</span>
+      </div>
+      <p class="muted">Whippany, NJ (Remote)</p>
+      <ul>
+        <li>Drive sales using Google Analytics, Ads, and search algorithms to process useful AdWords and publicize products.</li>
+        <li>Implement honeypots to eliminate botnet production, driving website traffic by 70%.</li>
+        <li>Optimize the business ERP Excel document for coherence between Engineering, Testing, and Sales.</li>
+      </ul>
+    </div>
+    <div class="item">
+      <div class="row">
+        <h3>Sensonics International — Research &amp; Development Intern</h3>
+        <span class="muted">May 2025 – October 2025</span>
+      </div>
+      <p class="muted">Haddon Heights, NJ</p>
+      <ul>
+        <li>Managed 30+ ongoing research projects in Jira, improving time efficiency by 60% across a wide project mix.</li>
+        <li>Automated shipping workflows with a JavaScript bookmarklet, increasing participant volume by 60%.</li>
+        <li>Analyzed deployment testing to verify consistent, auditable dataset collection across 100+ demographic groups.</li>
+      </ul>
+    </div>
+    <div class="item">
+      <div class="row">
+        <h3>Werbel Microwave — Computer Science Specialist</h3>
+        <span class="muted">February 2024 – July 2024</span>
+      </div>
+      <p class="muted">Whippany, NJ (Remote)</p>
+      <ul>
+        <li>Developed 3D/2D models in AutoCAD to virtualize products for clients and help drive product sales by 30%.</li>
+        <li>Logged 450+ inventory items with JavaScript, decreasing stock-room downtime by 2 hours.</li>
+        <li>Used Zoho CRM to automate inventory tracking, improving resource traceability by 90%.</li>
+      </ul>
+    </div>
+    <div class="item">
+      <div class="row">
+        <h3>Werbel Microwave — Test Technician</h3>
+        <span class="muted">February 2023 – August 2023</span>
+      </div>
+      <p class="muted">Whippany, NJ</p>
+      <ul>
+        <li>Performed threat analysis on 450+ RF components, identifying faults, anomalies, and non-compliant behavior.</li>
+        <li>Created instant CAPA ticketing with Excel macros, increasing threat mitigation in production by 30%.</li>
+        <li>Troubleshot customer order failures, contributing to a $2,000+ increase in sales-department revenue.</li>
+      </ul>
+    </div>
 
-    <h2>Projects &amp; selected activity</h2>
-    <h3>BLOOM — CMU Heinz / Replit Build-with-AI Buildathon</h3>
-    <p>Presented BLOOM, a companion experience focused on connection and growth for older adults. <a href="https://bloom-keepgrowing.vercel.app">bloom-keepgrowing.vercel.app</a></p>
-    <h3>Linux Live System Resource Monitor</h3>
-    <p>Rowan project delivering live alerts and key findings for ASRC Federal clients, with use-case and activity models.</p>
-    <h3>Marketplace Risk NYC</h3>
-    <p>Attended Marketplace Risk NYC (attendance; not an award).</p>
+    <h2>Course Projects</h2>
+    <ul class="projects">
+      <li>Contributing to artificial intelligence red-teaming research in CyLab at Carnegie Mellon University.</li>
+      <li>Developing a business model with HKS Financial to turn entrepreneurial ideas into sophisticated strategies.</li>
+      <li>Attended Marketplace Risk to discuss enumeration attacks and marketplace trust &amp; safety — attendance only; not an award.</li>
+      <li>Placed top 6 at the Carnegie Mellon / Replit Buildathon with BLOOM, an AI-assisted companion for older adults.</li>
+      <li>Built a C++ system resource monitor for ASRC Federal clients using SDLC and Agile Scrum.</li>
+      <li>Identified library-network vulnerabilities with Burp Suite, Wireshark, Nmap, and Metasploit.</li>
+      <li>Used Power Automate to decrease downtime by 70% when opening SOPs and CAPA files in production.</li>
+      <li>Automated shipping by 90% by integrating a Claude bookmarklet into USPS Click-N-Ship.</li>
+    </ul>
 
     <h2>Skills</h2>
-    <p><strong>GRC:</strong> ServiceNow GRC, OneTrust, Vanta, NIST, ISO 9001, RBAC, risk assessment, business continuity</p>
-    <p><strong>Security:</strong> MITRE ATT&amp;CK, SIEM / Power BI, OSINT, incident response, NSA/DHS certified, Security+ (in progress)</p>
-    <p><strong>Engineering:</strong> Python, JavaScript, Java, C++, SQL / MongoDB, AWS, GCP, Azure, Jira, Zoho CRM</p>
+    <div class="skills">
+      <p><strong>GRC &amp; compliance:</strong> ServiceNow GRC, OneTrust, Vanta, SIEM / Power BI, Power Automate, MITRE ATT&amp;CK, OSINT, Qt Charts</p>
+      <p><strong>Security &amp; networking:</strong> Risk management, data visualization, incident response, business continuity</p>
+      <p><strong>Cloud &amp; platforms:</strong> AWS, GCP, Azure, Zoho, Microsoft Office, MongoDB, cloud architecture</p>
+      <p><strong>Programming:</strong> Python, JavaScript, Java, C++, Rust, Lua, R, VBA, HTML</p>
+    </div>
   </main>
   <script>
     document.getElementById("print").addEventListener("click", function (event) {
