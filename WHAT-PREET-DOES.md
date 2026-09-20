@@ -18,10 +18,9 @@ Short checklist only Preet can finish in GitHub / hosting settings.
    Confirm the BLOOM URL (`https://bloom-keepgrowing.vercel.app` returned 404 when checked).
 
 5. **Personal photo slots (About collage)**  
-   Replace these with Instagram travel or achievement photos (same filenames). Overlay CSS stays; text stays readable.
-   - `assets/life-01.jpg` — campus / Heinz (currently the collaboration photo)
-   - `assets/life-02.jpg` — presenting / achievement (currently BLOOM Buildathon)
-   - `assets/life-03.jpg` — portrait (currently the outdoor headshot)
-   Preferred Instagram drop-ins if present in `uploads/`:
-   `achieve-01.jpg`, `achieve-02.jpg`, `travel-01.jpg`, `travel-02.jpg`, `leadership-01.jpg`.
-   Copy those over the `life-0N.jpg` names (or add extra slots) before they appear on the site.
+   Instagram stills from `@pmg.preet` are in place. Replace the same filenames to refresh the rail; overlay CSS stays.
+   - `assets/achieve-01.jpg` — graduation stole, Rowan → Carnegie
+   - `assets/achieve-02.jpg` — white-suit portrait on Rowan steps
+   - `assets/travel-01.jpg` — historic UK interior (Sensonics trip)
+   - `assets/travel-02.jpg` — Chicago River with peers
+   - `assets/leadership-01.jpg` — outdoor leadership walk
