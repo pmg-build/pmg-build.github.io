@@ -9,6 +9,8 @@
   --max: 1040px;
   --serif: "Instrument Serif", "Times New Roman", serif;
   --sans: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --photo-fg: #F4F1EA;
+  --photo-muted: rgba(244, 241, 234, 0.78);
 }
 
 * { box-sizing: border-box; }
@@ -132,92 +134,81 @@ section {
 }
 .hero { border-top: 0; padding-top: clamp(3.5rem, 10vw, 7rem); }
 
-/* Instagram travel / achievement collage from @pmg.preet.
-   Swap the files in assets/ to update; crops and the cream fade stay. */
-.about-band {
+.section-photo {
   position: relative;
   isolation: isolate;
+  color: var(--photo-fg);
+  background-color: #12100e;
+  border-top-color: rgba(244, 241, 234, 0.12);
   overflow: hidden;
-  border-top: 1px solid var(--line);
-  padding-top: 0;
 }
-.life-collage {
-  position: relative;
-  z-index: 0;
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr) minmax(0, 1.15fr);
-  grid-template-rows: 1fr 1fr;
-  gap: 0.3rem;
-  height: clamp(16rem, 36vw, 24rem);
-  pointer-events: none;
-}
-.life-slot {
-  background-color: #c8bfb2;
-  background-size: cover;
-  background-repeat: no-repeat;
-  filter: saturate(0.88) contrast(1.02);
-}
-.life-slot-achieve-02 {
-  grid-column: 1;
-  grid-row: 1;
-  background-image: url("assets/achieve-02.jpg");
-  background-position: center 52%;
-}
-.life-slot-travel-01 {
-  grid-column: 3;
-  grid-row: 2;
-  background-image: url("assets/travel-01.jpg");
-  background-position: center 48%;
-}
-.life-slot-travel-02 {
-  grid-column: 3;
-  grid-row: 1;
-  background-image: url("assets/travel-02.jpg");
-  background-position: right 38%;
-}
-.life-slot-leadership {
-  grid-column: 1;
-  grid-row: 2;
-  background-image: url("assets/leadership-01.jpg");
-  background-position: 42% 28%;
-}
-.life-slot-achieve-01 {
-  grid-column: 2;
-  grid-row: 1 / 3;
-  background-image: url("assets/achieve-01.jpg");
-  background-position: center 22%;
-}
-.about-veil {
+.section-photo::before,
+.section-photo::after {
+  content: "";
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: clamp(16rem, 36vw, 24rem);
-  z-index: 1;
+  inset: 0;
   pointer-events: none;
-  background:
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--bg) 4%, transparent) 0%,
-      color-mix(in srgb, var(--bg) 10%, transparent) 72%,
-      var(--bg) 100%
-    );
 }
-.about-inner {
-  position: relative;
-  z-index: 2;
-  padding-top: clamp(1.5rem, 4vw, 2.4rem);
+.section-photo::before {
+  z-index: -2;
+  background-image: var(--section-photo);
+  background-size: cover;
+  background-position: center;
 }
+.section-photo::after {
+  z-index: -1;
+  background: rgba(16, 13, 11, var(--section-scrim, 0.5));
+}
+.section-photo .section-label { color: #f0c4c9; }
+.section-photo .section-note,
+.section-photo .headline-full,
+.section-photo .eyebrow,
+.section-photo .org,
+.section-photo .meta,
+.section-photo .project-copy p,
+.section-photo .compact p,
+.section-photo figcaption {
+  color: var(--photo-muted);
+}
+.section-photo .btn {
+  border-color: var(--photo-fg);
+  color: var(--photo-fg);
+}
+.section-photo .btn:hover {
+  background: rgba(244, 241, 234, 0.12);
+}
+.section-photo .btn-primary {
+  background: var(--photo-fg);
+  color: var(--ink);
+  border-color: var(--photo-fg);
+}
+.section-photo .btn-primary:hover {
+  background: #fff;
+  color: var(--ink);
+}
+.section-photo :focus-visible {
+  outline-color: var(--photo-fg);
+}
+
+.about-band { padding-top: clamp(3.5rem, 8vw, 6.5rem); }
+.about-inner { position: relative; z-index: 1; }
 .about-panel {
   padding: 1.15rem 1.25rem 1.05rem;
   background: var(--surface);
   border: 1px solid var(--line);
+  color: var(--ink);
 }
+.about-panel p,
+.about-panel li { color: var(--ink); }
+.about-panel .proof-list li { border-top-color: var(--line); }
+
 .hero-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 2.5rem;
   align-items: end;
+  position: relative;
+  z-index: 1;
 }
 .hero-grid { max-width: 42rem; }
 .headshot {
@@ -225,8 +216,9 @@ section {
   height: auto;
   aspect-ratio: 1;
   object-fit: cover;
-  object-position: center 58%;
-  border: 1px solid var(--line);
+  object-position: center 38%;
+  border: 1px solid rgba(244, 241, 234, 0.45);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
 }
 .eyebrow {
   margin: 0 0 1rem;
@@ -337,7 +329,7 @@ section {
 
 .project {
   padding: 1.5rem 0 2rem;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid rgba(244, 241, 234, 0.16);
 }
 .project.featured {
   display: grid;
@@ -353,6 +345,7 @@ section {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+.section-photo .tag { color: #f0c4c9; }
 .project h3 { font-family: var(--serif); font-size: 1.7rem; font-weight: 400; }
 .project-copy p { margin: 0.6rem 0 0; color: var(--muted); }
 .project-visual { margin: 0; }
@@ -361,7 +354,25 @@ section {
   height: 100%;
   min-height: 220px;
   object-fit: cover;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(244, 241, 234, 0.28);
+}
+.achieve-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 0 0 1.5rem;
+}
+.achieve-strip figure { margin: 0; }
+.achieve-strip img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center 30%;
+  border: 1px solid rgba(244, 241, 234, 0.28);
+}
+.achieve-strip figcaption {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
 }
 .edu-photo { margin: 1.1rem 0 0; }
 .edu-photo img {
@@ -415,6 +426,142 @@ section {
   gap: 1.5rem;
 }
 .skill-groups p { margin: 0.5rem 0 0; color: var(--muted); }
+
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: 1.35rem;
+}
+.gallery-filter {
+  min-height: 44px;
+  padding: 0.4rem 0.95rem;
+  border: 1px solid rgba(244, 241, 234, 0.45);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--photo-fg);
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+.gallery-filter:hover,
+.gallery-filter[aria-selected="true"] {
+  background: var(--photo-fg);
+  color: var(--ink);
+  border-color: var(--photo-fg);
+}
+.gallery-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+.gallery-grid li[hidden] { display: none; }
+.gallery-card {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid rgba(244, 241, 234, 0.22);
+  background: #1a1714;
+  cursor: pointer;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+.gallery-card:hover img,
+.gallery-card:focus-visible img {
+  transform: scale(1.04);
+}
+.gallery-card:focus-visible {
+  outline: 2px solid var(--photo-fg);
+  outline-offset: 3px;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+}
+.lightbox[hidden] { display: none; }
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 10, 9, 0.88);
+}
+.lightbox-dialog {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-rows: auto 1fr auto;
+  align-items: center;
+  justify-items: center;
+  padding: 1rem;
+  gap: 0.75rem;
+}
+.lightbox-close {
+  grid-column: 1 / -1;
+  justify-self: end;
+  min-height: 44px;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--photo-fg);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--photo-fg);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.lightbox-figure {
+  grid-column: 2;
+  margin: 0;
+  max-width: min(1100px, 100%);
+  text-align: center;
+}
+.lightbox-figure img {
+  max-height: min(78vh, 900px);
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  margin-inline: auto;
+  object-fit: contain;
+  border: 1px solid rgba(244, 241, 234, 0.2);
+}
+.lightbox-figure figcaption {
+  margin-top: 0.7rem;
+  color: var(--photo-muted);
+  font-size: 0.95rem;
+}
+.lightbox-nav {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid rgba(244, 241, 234, 0.45);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--photo-fg);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.lightbox-close:hover,
+.lightbox-nav:hover {
+  background: rgba(244, 241, 234, 0.12);
+}
+.lightbox-close:focus-visible,
+.lightbox-nav:focus-visible {
+  outline: 2px solid var(--photo-fg);
+  outline-offset: 3px;
+}
 
 .contact-row {
   display: flex;
@@ -499,10 +646,20 @@ section {
   .hero-layout {
     grid-template-columns: 1fr;
   }
+  .achieve-strip,
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
   .timeline > li { gap: 0.35rem; }
   .headshot { width: 200px; }
-  .life-collage,
-  .about-veil { height: 14rem; }
+  .lightbox-dialog {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto auto;
+  }
+  .lightbox-close { grid-column: 1 / -1; }
+  .lightbox-figure { grid-column: 1 / -1; }
+  .lightbox-prev { grid-column: 1; }
+  .lightbox-next { grid-column: 2; }
 }
 
 @media (max-width: 720px) {
@@ -523,23 +680,45 @@ section {
   .site-nav.open { display: flex; }
   .nav-links { flex-direction: column; gap: 0.7rem; }
   .site-nav .btn { width: fit-content; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 420px) {
+  .gallery-grid { grid-template-columns: 1fr; }
 }
 
 @media print {
-  .life-collage,
-  .about-veil { display: none; }
+  .section-photo {
+    color: var(--ink);
+    background: transparent;
+  }
+  .section-photo::before,
+  .section-photo::after,
+  .gallery-grid,
+  .gallery-filters,
+  .lightbox { display: none; }
+  .section-photo .section-label { color: var(--accent); }
+  .section-photo .section-note,
+  .section-photo .headline-full,
+  .section-photo .eyebrow,
+  .section-photo .project-copy p { color: var(--muted); }
   .about-panel {
     background: transparent;
     border: 0;
     padding: 0;
-    backdrop-filter: none;
   }
 }
 
 @media (prefers-reduced-transparency: reduce) {
-  .about-veil { background: var(--bg); }
+  .section-photo::after { background: rgba(16, 13, 11, 0.72); }
   .about-panel {
     background: var(--surface);
-    backdrop-filter: none;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .gallery-card img { transition: none; }
+}
+
+body.lightbox-open { overflow: hidden; }

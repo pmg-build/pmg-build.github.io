@@ -10,15 +10,28 @@ GitHub Pages also serves the same files at https://pmg-build.github.io. The cust
 
 ## What’s on the site
 
-- About (rewritten for hiring officers) with an Instagram travel/achievement collage (`assets/achieve-*.jpg`, `travel-*.jpg`, `leadership-01.jpg`)
+- About (rewritten for hiring officers)
+- Hero / About / Projects / Life use approved scenic backgrounds with a dark scrim so copy stays readable
+- Headshot cropped from `assets/gallery/content/portraits/portraits-05.jpg`
 - Experience, projects/achievements, education, skills, contact
+- Life gallery with All / Shenanigans / Social / Community filters and a keyboard-accessible lightbox
 - Resume page (`resume.html`) and PDF link (`resume.pdf`)
 - Projects: BLOOM (Heinz / Replit Buildathon, top 6; no broken product URL) and Linux Live System Resource Monitor, plus Marketplace Risk attendance
 - Socials: LinkedIn, Instagram `@pmg.preet`, YouTube `@pmg-preet`
 
+## Image library
+
+Approved stills live under `assets/gallery/` in the same folders Preet signed off on:
+
+- `backgrounds/` — section overlays
+- `content/portraits/` — source portraits (hero uses a face crop of portraits-05)
+- `content/shenanigans/`, `content/social/`, `content/community/` — Life gallery
+- `content/achievements/` — projects/achievements
+- `content/diagrams/` — Linux monitor original activity diagram (use-case stays the existing SVG)
+
 ## Tech stack
 
-- Static HTML, CSS, and a small `script.js` (mobile nav + profile preview modals)
+- Static HTML, CSS, and a small `script.js` (mobile nav, profile preview modals, gallery lightbox)
 - GitHub Pages
 - Custom domain via `CNAME` → `preet-desai.me`
 - Google Fonts (Instrument Serif, Source Sans 3)

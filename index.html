@@ -61,6 +61,7 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#skills">Skills</a></li>
+          <li><a href="#life">Life</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <a class="btn btn-small" href="resume.html">Resume</a>
@@ -69,7 +70,7 @@
   </header>
 
   <main id="main">
-    <section class="hero" id="top">
+    <section class="hero section-photo" id="top" style="--section-photo: url('assets/gallery/backgrounds/backgrounds-01.jpg'); --section-scrim: 0.50;">
       <div class="container hero-layout">
         <div class="hero-grid">
           <p class="eyebrow">Morris Plains, NJ · Open to Summer 2027</p>
@@ -86,15 +87,7 @@
       </div>
     </section>
 
-    <section id="about" class="about-band">
-      <div class="life-collage" aria-hidden="true">
-        <div class="life-slot life-slot-achieve-02"></div>
-        <div class="life-slot life-slot-travel-01"></div>
-        <div class="life-slot life-slot-travel-02"></div>
-        <div class="life-slot life-slot-leadership"></div>
-        <div class="life-slot life-slot-achieve-01"></div>
-      </div>
-      <div class="about-veil"></div>
+    <section id="about" class="about-band section-photo" style="--section-photo: url('assets/gallery/backgrounds/backgrounds-07.jpg'); --section-scrim: 0.48;">
       <div class="container split about-inner">
         <div>
           <p class="section-label">About</p>
@@ -173,7 +166,7 @@
       </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="section-photo" style="--section-photo: url('assets/gallery/backgrounds/backgrounds-10.jpg'); --section-scrim: 0.52;">
       <div class="container">
         <div class="section-intro">
           <p class="section-label">Projects &amp; achievements</p>
@@ -187,9 +180,20 @@
             <p>Presented BLOOM at the CMU Heinz / Replit Build-with-AI Buildathon — a companion experience focused on connection and growth for older adults. Placed top 6.</p>
           </div>
           <figure class="project-visual">
-            <img src="assets/bloom-presenting.jpg" alt="Preet Desai presenting BLOOM at the CMU Heinz / Replit Buildathon" />
+            <img src="assets/gallery/content/achievements/achievements-01.jpg" alt="Preet Desai presenting BLOOM at the CMU Heinz / Replit Buildathon" width="800" height="600" />
           </figure>
         </article>
+
+        <div class="achieve-strip">
+          <figure>
+            <img src="assets/gallery/content/achievements/achievements-02.jpg" alt="Preet Desai at Rowan graduation wearing a SASA vice president stole" width="720" height="480" />
+            <figcaption>Rowan graduation — student organization stole. Not a separate award.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/content/achievements/achievements-03.jpg" alt="Preet Desai on the Rowan campus after graduation" width="720" height="480" />
+            <figcaption>Campus portrait after graduation.</figcaption>
+          </figure>
+        </div>
 
         <article class="project">
           <div class="project-copy">
@@ -207,7 +211,7 @@
               <figcaption>Activity model</figcaption>
             </figure>
             <figure>
-              <img src="assets/linux-activity-original.jpg" alt="Original Linux Live System Resource Monitor activity diagram from the Rowan project." />
+              <img src="assets/gallery/content/diagrams/diagrams-02.jpg" alt="Original Linux Live System Resource Monitor activity diagram from the Rowan project." />
               <figcaption>Original course diagram</figcaption>
             </figure>
           </div>
@@ -237,7 +241,7 @@
               <li>Coursework includes Information Security Management, Economic Analysis, and Intro to Cyber Intelligence.</li>
             </ul>
             <figure class="edu-photo">
-              <img src="assets/heinz-collaboration.jpg" alt="Heinz College team collaboration session" />
+              <img src="assets/gallery/content/community/community-01.jpg" alt="Heinz College team collaboration session" width="450" height="800" />
               <figcaption>Heinz College collaboration — not an award.</figcaption>
             </figure>
           </article>
@@ -274,6 +278,126 @@
             <p>Python · JavaScript · Java · C++ · SQL / MongoDB · AWS · GCP · Azure · Jira · Zoho CRM</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="life" class="section-photo" style="--section-photo: url('assets/gallery/backgrounds/backgrounds-08.jpg'); --section-scrim: 0.46;">
+      <div class="container">
+        <div class="section-intro">
+          <p class="section-label">Life</p>
+          <h2>Connections outside the resume.</h2>
+          <p class="section-note">Friends, family, and community. Filter to skim; click a photo to enlarge. Esc and arrow keys work in the viewer.</p>
+        </div>
+
+        <div class="gallery-filters" role="tablist" aria-label="Photo categories">
+          <button type="button" class="gallery-filter" role="tab" id="filter-all" aria-selected="true" aria-controls="gallery-panel" data-filter="all">All</button>
+          <button type="button" class="gallery-filter" role="tab" id="filter-shenanigans" aria-selected="false" aria-controls="gallery-panel" data-filter="shenanigans">Shenanigans</button>
+          <button type="button" class="gallery-filter" role="tab" id="filter-social" aria-selected="false" aria-controls="gallery-panel" data-filter="social">Social</button>
+          <button type="button" class="gallery-filter" role="tab" id="filter-community" aria-selected="false" aria-controls="gallery-panel" data-filter="community">Community</button>
+        </div>
+
+        <ul class="gallery-grid" id="gallery-panel" role="tabpanel" aria-labelledby="filter-all">
+          <li data-category="community">
+            <button type="button" class="gallery-card" data-src="assets/gallery/content/community/community-01.jpg" data-caption="Heinz College collaboration session.">
+              <img src="assets/gallery/content/community/community-01.jpg" alt="Heinz College collaboration session" width="450" height="800" loading="lazy" decoding="async" />
+            </button>
+          </li>
+          <li data-category="community">
+            <button type="button" class="gallery-card" data-src="assets/gallery/content/community/community-02.jpg" data-caption="Rowan graduation with classmates.">
+              <img src="assets/gallery/content/community/community-02.jpg" alt="Preet Desai and classmates in Rowan graduation attire" width="800" height="600" loading="lazy" decoding="async" />
+            </button>
+          </li>
+          <li data-category="community">
+            <button type="button" class="gallery-card" data-src="assets/gallery/content/community/community-05.jpg" data-caption="Outdoor leadership walk.">
+              <img src="assets/gallery/content/community/community-05.jpg" alt="Outdoor leadership walk with youth participants" width="816" height="544" loading="lazy" decoding="async" />
+            </button>
+          </li>
+          <li data-category="community">
+            <button type="button" class="gallery-card" data-src="assets/gallery/content/community/community-06.jpg" data-caption="Outdoor community group.">
+              <img src="assets/gallery/content/community/community-06.jpg" alt="Group at an outdoor community event wearing life jackets" width="600" height="800" loading="lazy" decoding="async" />
+            </button>
+          </li>
+          <li data-category="community">
+            <button type="button" class="gallery-card" data-src="assets/gallery/content/community/community-03.jpg" data-caption="Friends at an outdoor gathering.">
+              <img src="assets/gallery/content/community/community-03.jpg" alt="Group of friends at an outdoor gathering" width="800" height="600" loading="lazy" decoding="async" />
+            </button>
+          </li>
+          <li data-category="community">
+            <button type="button" class="gallery-card" data-src="assets/gallery/content/community/community-04.jpg" data-caption="Friends on an outdoor deck.">
+              <img src="assets/gallery/content/community/community-04.jpg" alt="Friends standing together on an outdoor deck" width="800" height="450" loading="lazy" decoding="async" />
+            </button>
+          </li>
+          <li data-category="social">
+            <button type="button" class="gallery-card" data-src="assets/gallery/content/social/social-03.jpg" data-caption="Formal event with friends.">
+              <img src="assets/gallery/content/social/social-03.jpg" alt="Preet Desai and friends in formal attire" width="800" height="534" loading="lazy" decoding="async" />
+            </button>
+          </li>
+          <li data-category="social">
+            <button type="button" class="gallery-card" data-src="assets/gallery/content/social/social-06.jpg" data-caption="Family celebration.">
+              <img src="assets/gallery/content/social/social-06.jpg" alt="Family portrait at a celebration" width="800" height="534" loading="lazy" decoding="async" />
+            </button>
+          </li>
+          <li data-category="social">
+            <button type="button" class="gallery-card" data-src="assets/gallery/content/social/social-05.jpg" data-caption="Friends on the water at sunset.">
+              <img src="assets/gallery/content/social/social-05.jpg" alt="Friends together on the water at sunset" width="800" height="535" loading="lazy" decoding="async" />
+            </button>
+          </li>
+          <li data-category="social">
+            <button type="button" class="gallery-card" data-src="assets/gallery/content/social/social-01.jpg" data-caption="Friends downtown.">
+              <img src="assets/gallery/content/social/social-01.jpg" alt="Preet Desai with friends downtown" width="600" height="800" loading="lazy" decoding="async" />
+            </button>
+          </li>
+          <li data-category="social">
+            <button type="button" class="gallery-card" data-src="assets/gallery/content/social/social-04.jpg" data-caption="Family and friends at a celebration.">
+              <img src="assets/gallery/content/social/social-04.jpg" alt="Family and friends posing at a celebration" width="800" height="600" loading="lazy" decoding="async" />
+            </button>
+          </li>
+          <li data-category="social">
+            <button type="button" class="gallery-card" data-src="assets/gallery/content/social/social-07.jpg" data-caption="Friends on an outdoor deck.">
+              <img src="assets/gallery/content/social/social-07.jpg" alt="Friends lined up on an outdoor deck" width="800" height="450" loading="lazy" decoding="async" />
+            </button>
+          </li>
+          <li data-category="social">
+            <button type="button" class="gallery-card" data-src="assets/gallery/content/social/social-02.jpg" data-caption="Friends at a gathering.">
+              <img src="assets/gallery/content/social/social-02.jpg" alt="Friends together at an indoor gathering" width="800" height="600" loading="lazy" decoding="async" />
+            </button>
+          </li>
+          <li data-category="shenanigans">
+            <button type="button" class="gallery-card" data-src="assets/gallery/content/shenanigans/shenanigans-07.jpg" data-caption="Friends along the Chicago River.">
+              <img src="assets/gallery/content/shenanigans/shenanigans-07.jpg" alt="Friends taking a selfie along the Chicago River" width="720" height="540" loading="lazy" decoding="async" />
+            </button>
+          </li>
+          <li data-category="shenanigans">
+            <button type="button" class="gallery-card" data-src="assets/gallery/content/shenanigans/shenanigans-02.jpg" data-caption="Wedding celebration with family and friends.">
+              <img src="assets/gallery/content/shenanigans/shenanigans-02.jpg" alt="Wedding celebration with family and friends" width="800" height="534" loading="lazy" decoding="async" />
+            </button>
+          </li>
+          <li data-category="shenanigans">
+            <button type="button" class="gallery-card" data-src="assets/gallery/content/shenanigans/shenanigans-03.jpg" data-caption="Friends at an outdoor gathering.">
+              <img src="assets/gallery/content/shenanigans/shenanigans-03.jpg" alt="Friends celebrating together outdoors" width="800" height="450" loading="lazy" decoding="async" />
+            </button>
+          </li>
+          <li data-category="shenanigans">
+            <button type="button" class="gallery-card" data-src="assets/gallery/content/shenanigans/shenanigans-05.jpg" data-caption="Friends on a boat at dusk.">
+              <img src="assets/gallery/content/shenanigans/shenanigans-05.jpg" alt="Friends on a boat at dusk with a city skyline" width="800" height="600" loading="lazy" decoding="async" />
+            </button>
+          </li>
+          <li data-category="shenanigans">
+            <button type="button" class="gallery-card" data-src="assets/gallery/content/shenanigans/shenanigans-04.jpg" data-caption="Preet with a friend.">
+              <img src="assets/gallery/content/shenanigans/shenanigans-04.jpg" alt="Preet Desai with a friend" width="800" height="600" loading="lazy" decoding="async" />
+            </button>
+          </li>
+          <li data-category="shenanigans">
+            <button type="button" class="gallery-card" data-src="assets/gallery/content/shenanigans/shenanigans-01.jpg" data-caption="Preet with a friend on indoor stairs.">
+              <img src="assets/gallery/content/shenanigans/shenanigans-01.jpg" alt="Preet Desai with a friend sitting on indoor stairs" width="600" height="800" loading="lazy" decoding="async" />
+            </button>
+          </li>
+          <li data-category="shenanigans">
+            <button type="button" class="gallery-card" data-src="assets/gallery/content/shenanigans/shenanigans-06.jpg" data-caption="Friends at a night out.">
+              <img src="assets/gallery/content/shenanigans/shenanigans-06.jpg" alt="Friends together during a night out" width="800" height="600" loading="lazy" decoding="async" />
+            </button>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -329,6 +453,19 @@
         <a class="btn btn-primary" id="modal-open" href="#" target="_blank" rel="noopener noreferrer">Open</a>
         <button type="button" class="btn" id="modal-close">Close</button>
       </div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption">
+      <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close photo">Close</button>
+      <button type="button" class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous photo">Previous</button>
+      <figure class="lightbox-figure">
+        <img id="lightbox-image" alt="" />
+        <figcaption id="lightbox-caption"></figcaption>
+      </figure>
+      <button type="button" class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next photo">Next</button>
     </div>
   </div>
 

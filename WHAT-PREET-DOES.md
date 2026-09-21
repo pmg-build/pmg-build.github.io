@@ -17,10 +17,5 @@ Short checklist only Preet can finish in GitHub / hosting settings.
 4. **BLOOM product URL**  
    The old Vercel app (`bloom-keepgrowing.vercel.app`) 404s and is no longer linked. Add a new URL on the BLOOM project only if one is live.
 
-5. **Personal photo slots (About collage)**  
-   Instagram stills from `@pmg.preet` are in place. Replace the same filenames to refresh the rail; overlay CSS stays.
-   - `assets/achieve-01.jpg` — graduation stole, Rowan → Carnegie
-   - `assets/achieve-02.jpg` — white-suit portrait on Rowan steps
-   - `assets/travel-01.jpg` — historic UK interior (Sensonics trip)
-   - `assets/travel-02.jpg` — Chicago River with peers
-   - `assets/leadership-01.jpg` — outdoor leadership walk
+5. **Approved photo library**  
+   Final stills are in `assets/gallery/` using Preet’s signed-off folders (`backgrounds/`, `content/portraits/`, `shenanigans/`, `social/`, `community/`, `achievements/`, `diagrams/`). Replace a file in place to refresh that slot; overlay and gallery CSS stay.
