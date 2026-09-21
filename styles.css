@@ -14,7 +14,10 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.35rem;
+}
 body {
   margin: 0;
   background: var(--bg);
@@ -654,12 +657,16 @@ section {
   .headshot { width: 200px; }
   .lightbox-dialog {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr auto auto;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    grid-template-areas:
+      "close close"
+      "figure figure"
+      "prev next";
   }
-  .lightbox-close { grid-column: 1 / -1; }
-  .lightbox-figure { grid-column: 1 / -1; }
-  .lightbox-prev { grid-column: 1; }
-  .lightbox-next { grid-column: 2; }
+  .lightbox-close { grid-area: close; }
+  .lightbox-figure { grid-area: figure; max-height: 100%; }
+  .lightbox-prev { grid-area: prev; justify-self: stretch; }
+  .lightbox-next { grid-area: next; justify-self: stretch; }
 }
 
 @media (max-width: 720px) {
