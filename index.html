@@ -49,6 +49,13 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" role="progressbar" aria-label="Page progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+  <svg class="mission-rail" viewBox="0 0 24 100" aria-hidden="true" focusable="false">
+    <path class="mission-rail-path" pathLength="1" d="M12 6 V94" />
+    <circle class="mission-rail-node" data-node="0" cx="12" cy="10" r="2.6" />
+    <circle class="mission-rail-node" data-node="1" cx="12" cy="50" r="2.6" />
+    <circle class="mission-rail-node" data-node="2" cx="12" cy="90" r="2.6" />
+  </svg>
 
   <header class="site-header">
     <div class="container nav">
@@ -70,12 +77,17 @@
   </header>
 
   <main id="main">
-    <section class="hero section-photo" id="top" style="--section-photo: url('assets/gallery/backgrounds/backgrounds-01.jpg'); --section-scrim: 0.50;">
+    <section class="hero section-photo fullpage" id="top">
+      <img class="hero-photo" src="assets/gallery/backgrounds/backgrounds-01.jpg" alt="" width="1200" height="1600" decoding="async" />
       <div class="container hero-layout">
         <div class="hero-grid">
           <p class="eyebrow">Morris Plains, NJ · Open to Summer 2027</p>
           <h1>Preet Desai</h1>
           <p class="lede">CMU Heinz MSISPM · Cyber, risk, and GRC</p>
+          <p class="mission" data-reveal>
+            <span class="mission-kicker">Mission</span>
+            To <span class="mission-stage" data-stage="0">automate the industry</span> and make <span class="mission-stage" data-stage="1">AI environments safer</span> <span class="mission-stage" data-stage="2">for everyday use</span>.
+          </p>
           <p class="headline-full">GRC &amp; Compliance Builder | CMU Heinz MSISPM ’28 | ISO 9001 · NIST · RBAC | Risk Assessment | NSA/DHS Certified | Security+ (in progress) | Open to Summer 2027 Internships</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="resume.html">View resume</a>
@@ -87,13 +99,20 @@
       </div>
     </section>
 
-    <section id="about" class="about-band section-photo" style="--section-photo: url('assets/gallery/backgrounds/backgrounds-07.jpg'); --section-scrim: 0.48;">
+    <section id="about" class="about-band section-photo fullpage" style="--section-photo: url('assets/gallery/backgrounds/backgrounds-07.jpg'); --section-scrim: 0.48;">
       <div class="container split about-inner">
-        <div>
+        <div data-reveal>
           <p class="section-label">About</p>
           <h2>The short version.</h2>
+          <p class="safety-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 56" width="40" height="46">
+              <path class="safety-shield" d="M24 4 L42 12 V28 C42 40 33 49 24 52 C15 49 6 40 6 28 V12 Z" />
+              <path class="safety-lock" d="M18 26 V23 A6 6 0 0 1 30 23 V26" />
+              <rect class="safety-body" x="16" y="26" width="16" height="12" rx="2" />
+            </svg>
+          </p>
         </div>
-        <div class="prose about-panel">
+        <div class="prose about-panel" data-reveal>
           <p>CMU Heinz MSISPM ’28 — cybersecurity governance, risk, and compliance. Open to a Summer 2027 internship in cyber, risk, or GRC.</p>
           <p>B.S. Computer Science from Rowan University’s John H. Martinson Honors College, completed in three years, Magna Cum Laude (GPA 3.7). NSA/DHS certification is complete; Security+ is in progress.</p>
           <ul class="proof-list">
@@ -105,9 +124,9 @@
       </div>
     </section>
 
-    <section id="experience">
+    <section id="experience" class="fullpage">
       <div class="container">
-        <div class="section-intro">
+        <div class="section-intro" data-reveal>
           <p class="section-label">Experience</p>
           <h2>Roles with measurable delivery.</h2>
         </div>
@@ -166,9 +185,9 @@
       </div>
     </section>
 
-    <section id="projects" class="section-photo" style="--section-photo: url('assets/gallery/backgrounds/backgrounds-10.jpg'); --section-scrim: 0.52;">
+    <section id="projects" class="section-photo fullpage" style="--section-photo: url('assets/gallery/backgrounds/backgrounds-10.jpg'); --section-scrim: 0.52;">
       <div class="container">
-        <div class="section-intro">
+        <div class="section-intro" data-reveal>
           <p class="section-label">Projects &amp; achievements</p>
           <h2>Proof of work, not a trophy wall.</h2>
         </div>
@@ -217,17 +236,20 @@
           </div>
         </article>
 
-        <article class="project compact">
+        <article class="project compact" data-reveal>
           <p class="tag">Industry</p>
           <h3>Marketplace Risk NYC</h3>
           <p>Attended Marketplace Risk NYC — conversations with marketplace risk, trust &amp; safety, and compliance practitioners. Attendance only; not an award.</p>
+          <p class="project-link">
+            <a class="btn btn-small" href="https://www.youtube.com/@pmg-preet" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+          </p>
         </article>
       </div>
     </section>
 
-    <section id="education">
+    <section id="education" class="fullpage">
       <div class="container">
-        <div class="section-intro">
+        <div class="section-intro" data-reveal>
           <p class="section-label">Education</p>
           <h2>Academic path.</h2>
         </div>
@@ -258,9 +280,9 @@
       </div>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="fullpage">
       <div class="container">
-        <div class="section-intro">
+        <div class="section-intro" data-reveal>
           <p class="section-label">Skills</p>
           <h2>Tools used in the work above.</h2>
         </div>
@@ -281,9 +303,9 @@
       </div>
     </section>
 
-    <section id="life" class="section-photo" style="--section-photo: url('assets/gallery/backgrounds/backgrounds-08.jpg'); --section-scrim: 0.46;">
+    <section id="life" class="section-photo fullpage" style="--section-photo: url('assets/gallery/backgrounds/backgrounds-08.jpg'); --section-scrim: 0.46;">
       <div class="container">
-        <div class="section-intro">
+        <div class="section-intro" data-reveal>
           <p class="section-label">Life</p>
           <h2>Connections outside the resume.</h2>
           <p class="section-note">Friends, family, and community. Filter to skim; click a photo to enlarge. Esc and arrow keys work in the viewer.</p>
@@ -401,9 +423,9 @@
       </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="fullpage">
       <div class="container">
-        <div class="section-intro">
+        <div class="section-intro" data-reveal>
           <p class="section-label">Contact</p>
           <h2>One URL. Direct next steps.</h2>
           <p class="section-note">https://preet-desai.me · Resume first, then profiles.</p>

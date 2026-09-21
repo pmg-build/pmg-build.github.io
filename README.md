@@ -12,11 +12,14 @@ GitHub Pages also serves the same files at https://pmg-build.github.io. The cust
 
 - About (rewritten for hiring officers)
 - Hero / About / Projects / Life use approved scenic backgrounds with a dark scrim so copy stays readable
+- Hero is a full viewport (taller on desktop) so `backgrounds-01.jpg` can show as a complete framed photo
+- Major sections are at least `100dvh` / `100vh`
+- Mission line and light scroll progress: automate the industry and make AI environments safer for everyday use
 - Headshot cropped from `assets/gallery/content/portraits/portraits-05.jpg`
 - Experience, projects/achievements, education, skills, contact
 - Life gallery with All / Shenanigans / Social / Community filters and a keyboard-accessible lightbox
 - Resume page (`resume.html`) and PDF link (`resume.pdf`)
-- Projects: BLOOM (Heinz / Replit Buildathon, top 6; no broken product URL) and Linux Live System Resource Monitor, plus Marketplace Risk attendance
+- Projects: BLOOM (Heinz / Replit Buildathon, top 6; no broken product URL) and Linux Live System Resource Monitor, plus Marketplace Risk attendance with a YouTube link
 - Socials: LinkedIn, Instagram `@pmg.preet`, YouTube `@pmg-preet`
 
 ## Image library

@@ -190,3 +190,65 @@ document.addEventListener("keydown", (event) => {
     stepLightbox(1);
   }
 });
+
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const progressEl = document.querySelector(".scroll-progress");
+const rail = document.querySelector(".mission-rail");
+const railNodes = [...document.querySelectorAll(".mission-rail-node")];
+const safetyMark = document.querySelector(".safety-mark");
+const mission = document.querySelector(".mission");
+
+function setProgress(value) {
+  const clamped = Math.min(1, Math.max(0, value));
+  if (progressEl) {
+    progressEl.style.transform = `scaleX(${clamped})`;
+    progressEl.setAttribute("aria-valuenow", String(Math.round(clamped * 100)));
+  }
+  railNodes.forEach((node, index) => {
+    const threshold = (index + 1) / (railNodes.length + 0.35);
+    node.classList.toggle("is-on", clamped >= threshold);
+  });
+  if (safetyMark) safetyMark.classList.toggle("is-open", clamped >= 0.18);
+}
+
+let ticking = false;
+function onScroll() {
+  if (ticking) return;
+  ticking = true;
+  requestAnimationFrame(() => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    setProgress(max > 0 ? window.scrollY / max : 0);
+    ticking = false;
+  });
+}
+
+if (!reduceMotion) {
+  document.querySelectorAll("[data-reveal]").forEach((el) => {
+    el.classList.remove("is-in");
+  });
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-in");
+        io.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.16, rootMargin: "0px 0px -8% 0px" }
+  );
+  document.querySelectorAll("[data-reveal], .project, .timeline > li, .edu-grid article, .skill-groups > div, .connect-card").forEach((el) => {
+    if (!el.hasAttribute("data-reveal")) el.setAttribute("data-reveal", "");
+    io.observe(el);
+  });
+  if (mission) io.observe(mission);
+  if (rail) {
+    requestAnimationFrame(() => rail.classList.add("is-drawing"));
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+} else {
+  document.querySelectorAll("[data-reveal]").forEach((el) => el.classList.add("is-in"));
+  if (progressEl) progressEl.style.transform = "scaleX(1)";
+  railNodes.forEach((node) => node.classList.add("is-on"));
+  if (safetyMark) safetyMark.classList.add("is-open");
+}
