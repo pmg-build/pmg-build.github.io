@@ -253,7 +253,6 @@ section {
   align-items: center;
   position: relative;
   z-index: 1;
-  width: 100%;
 }
 .hero-grid { max-width: 40rem; }
 .hero-portrait {
