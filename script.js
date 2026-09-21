@@ -234,13 +234,12 @@ if (!reduceMotion) {
         io.unobserve(entry.target);
       });
     },
-    { threshold: 0.16, rootMargin: "0px 0px -8% 0px" }
+    { threshold: 0.08, rootMargin: "0px 0px -6% 0px" }
   );
-  document.querySelectorAll("[data-reveal], .project, .timeline > li, .edu-grid article, .skill-groups > div, .connect-card").forEach((el) => {
+  document.querySelectorAll("[data-reveal], .timeline > li, .edu-grid article, .skill-groups > div, .connect-card").forEach((el) => {
     if (!el.hasAttribute("data-reveal")) el.setAttribute("data-reveal", "");
     io.observe(el);
   });
-  if (mission) io.observe(mission);
   if (rail) {
     requestAnimationFrame(() => rail.classList.add("is-drawing"));
   }

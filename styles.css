@@ -150,8 +150,9 @@ section {
 .hero {
   --hero-ratio: 1.333333;
   border-top: 0;
+  justify-content: flex-start;
   padding-top: clamp(5rem, 10vw, 7.5rem);
-  padding-bottom: clamp(3.5rem, 8vw, 6.5rem);
+  padding-bottom: clamp(2.5rem, 6vw, 4.5rem);
   background-color: #0b1018;
 }
 
@@ -209,6 +210,9 @@ section {
     object-position: center top;
   }
 }
+@media (max-width: 899px) {
+  .hero-layout { min-height: 0; }
+}
 .section-photo::after {
   z-index: -1;
   background: rgba(16, 13, 11, var(--section-scrim, 0.5));
@@ -264,6 +268,8 @@ section {
   position: relative;
   z-index: 1;
   width: 100%;
+  min-height: calc(100vh - 6.5rem);
+  min-height: calc(100dvh - 6.5rem);
 }
 .hero-grid { max-width: 42rem; }
 .headshot {
@@ -433,6 +439,8 @@ section {
 .project-copy p { margin: 0.6rem 0 0; color: var(--muted); }
 .project-link { margin: 0.9rem 0 0; }
 .project-link .btn { min-height: 40px; }
+.section-photo .project.compact h3 { color: var(--photo-fg); }
+.section-photo .project.compact p { color: var(--photo-muted); }
 .project-visual { margin: 0; }
 .project-visual img {
   width: 100%;
