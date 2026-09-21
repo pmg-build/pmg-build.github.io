@@ -1,9 +1,11 @@
-document.getElementById("year").textContent = new Date().getFullYear();
+const yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 const nav = document.getElementById("site-nav");
 const toggle = document.querySelector(".nav-toggle");
 
 function setNav(open) {
+  if (!nav || !toggle) return;
   nav.classList.toggle("open", open);
   toggle.setAttribute("aria-expanded", String(open));
   toggle.textContent = open ? "Close" : "Menu";
@@ -58,14 +60,17 @@ document.querySelectorAll("[data-preview]").forEach((el) => {
 });
 
 function closeModal() {
+  if (!modal) return;
   modal.classList.remove("open");
   modal.hidden = true;
 }
 
-closeBtn.addEventListener("click", closeModal);
-modal.addEventListener("click", (event) => {
-  if (event.target === modal) closeModal();
-});
+if (closeBtn) closeBtn.addEventListener("click", closeModal);
+if (modal) {
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) closeModal();
+  });
+}
 
 const galleryPanel = document.getElementById("gallery-panel");
 const filterButtons = [...document.querySelectorAll(".gallery-filter")];
@@ -132,9 +137,9 @@ function openLightbox(index) {
 }
 
 function closeLightbox() {
-  if (lightbox.hidden) return;
+  if (!lightbox || lightbox.hidden) return;
   lightbox.hidden = true;
-  lightboxImage.removeAttribute("src");
+  if (lightboxImage) lightboxImage.removeAttribute("src");
   document.body.classList.remove("lightbox-open");
   if (lightboxLastFocus) lightboxLastFocus.focus();
 }
@@ -153,26 +158,29 @@ galleryItems.forEach((item) => {
   });
 });
 
-lightboxClose.addEventListener("click", closeLightbox);
-lightboxPrev.addEventListener("click", () => stepLightbox(-1));
-lightboxNext.addEventListener("click", () => stepLightbox(1));
-lightbox.querySelector("[data-lightbox-close]").addEventListener("click", closeLightbox);
-
-lightbox.addEventListener("keydown", (event) => {
-  if (lightbox.hidden) return;
-  if (event.key === "Tab") {
-    const focusable = [lightboxClose, lightboxPrev, lightboxNext];
-    const first = focusable[0];
-    const last = focusable[focusable.length - 1];
-    if (event.shiftKey && document.activeElement === first) {
-      event.preventDefault();
-      last.focus();
-    } else if (!event.shiftKey && document.activeElement === last) {
-      event.preventDefault();
-      first.focus();
+if (lightboxClose) lightboxClose.addEventListener("click", closeLightbox);
+if (lightboxPrev) lightboxPrev.addEventListener("click", () => stepLightbox(-1));
+if (lightboxNext) lightboxNext.addEventListener("click", () => stepLightbox(1));
+if (lightbox) {
+  const backdrop = lightbox.querySelector("[data-lightbox-close]");
+  if (backdrop) backdrop.addEventListener("click", closeLightbox);
+  lightbox.addEventListener("keydown", (event) => {
+    if (lightbox.hidden) return;
+    if (event.key === "Tab") {
+      const focusable = [lightboxClose, lightboxPrev, lightboxNext].filter(Boolean);
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
     }
-  }
-});
+  });
+}
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
@@ -180,14 +188,15 @@ document.addEventListener("keydown", (event) => {
     closeModal();
     setNav(false);
   }
-  if (lightbox.hidden) return;
-  if (event.key === "ArrowLeft") {
-    event.preventDefault();
-    stepLightbox(-1);
-  }
-  if (event.key === "ArrowRight") {
-    event.preventDefault();
-    stepLightbox(1);
+  if (lightbox && !lightbox.hidden) {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      stepLightbox(-1);
+    }
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      stepLightbox(1);
+    }
   }
 });
 

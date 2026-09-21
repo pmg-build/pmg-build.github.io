@@ -105,6 +105,7 @@ a:hover { text-decoration-thickness: 2px; }
   font-size: 0.95rem;
 }
 .nav-links a:hover { color: var(--ink); }
+.nav-links a[aria-current="page"] { color: var(--ink); font-weight: 600; }
 
 .btn {
   display: inline-flex;
@@ -930,3 +931,39 @@ section {
 }
 
 body.lightbox-open { overflow: hidden; }
+
+.schedule-page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: clamp(4.75rem, 8vw, 6.5rem) 0 3.5rem;
+}
+.schedule-page h1 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+.calendly-shell {
+  width: 100%;
+  min-height: 700px;
+  margin-top: 0.5rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+.calendly-inline-widget {
+  width: 100%;
+  min-height: 700px;
+}
+.calendly-inline-widget[hidden] { display: none; }
+.calendly-pending {
+  margin: 0;
+  padding: clamp(2.5rem, 8vw, 4.5rem) 1.25rem;
+  text-align: center;
+  color: var(--muted);
+}
+@media (max-width: 700px) {
+  .calendly-shell,
+  .calendly-inline-widget { min-height: 640px; }
+}
