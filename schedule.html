@@ -57,17 +57,12 @@
           <p class="section-note">Hiring conversation with Preet Desai — CMU Heinz MSISPM, cyber / risk / GRC. Times shown in <strong>America/New_York</strong>.</p>
         </div>
 
-        <!--
-          Calendly: replace ONE string.
-          Placeholder: https://calendly.com/YOUR-USERNAME/30min
-          When a real event exists, set window.CALENDLY_EVENT_URL (below) and the data-url on .calendly-inline-widget to that same URL.
-        -->
+        <!-- Calendly event: https://calendly.com/preetd2026/30min -->
         <div class="calendly-shell">
-          <p class="calendly-pending" id="calendly-pending" hidden>Booking widget loads once Calendly is connected.</p>
           <div
             class="calendly-inline-widget"
             id="calendly-embed"
-            data-url="https://calendly.com/YOUR-USERNAME/30min"
+            data-url="https://calendly.com/preetd2026/30min"
             style="min-width:320px;height:700px;"
           ></div>
         </div>
@@ -87,35 +82,17 @@
   </footer>
 
   <script>
-    // Placeholder — replace this one string when Calendly is live:
-    window.CALENDLY_EVENT_URL = "https://calendly.com/YOUR-USERNAME/30min";
+    window.CALENDLY_EVENT_URL = "https://calendly.com/preetd2026/30min";
   </script>
   <script src="script.js"></script>
   <script>
     (function () {
-      var PLACEHOLDER = "https://calendly.com/YOUR-USERNAME/30min";
-      var url = window.CALENDLY_EVENT_URL || PLACEHOLDER;
       var widget = document.getElementById("calendly-embed");
-      var pending = document.getElementById("calendly-pending");
-      if (!widget) return;
-      widget.setAttribute("data-url", url);
-      var isStub = /YOUR-USERNAME/i.test(url);
-      if (isStub) {
-        if (pending) pending.hidden = false;
-        widget.setAttribute("hidden", "");
-        return;
+      if (widget && window.CALENDLY_EVENT_URL) {
+        widget.setAttribute("data-url", window.CALENDLY_EVENT_URL);
       }
-      if (pending) pending.hidden = true;
-      widget.removeAttribute("hidden");
-      var script = document.createElement("script");
-      script.src = "https://assets.calendly.com/assets/external/widget.js";
-      script.async = true;
-      document.body.appendChild(script);
     })();
   </script>
-  <!-- Standard Calendly pattern (kept for the live swap):
-       <div class="calendly-inline-widget" data-url="https://calendly.com/YOUR-USERNAME/30min" style="min-width:320px;height:700px;"></div>
-       <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-  -->
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>

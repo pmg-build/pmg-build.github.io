@@ -19,7 +19,7 @@ GitHub Pages also serves the same files at https://pmg-build.github.io. The cust
 - Experience, projects/achievements, education, skills, contact
 - Life gallery with All / Shenanigans / Social / Community filters and a keyboard-accessible lightbox
 - Resume page (`resume.html`) and PDF link (`resume.pdf`)
-- Schedule page (`schedule.html`, also `/schedule/`) — Calendly embed shell; swap `https://calendly.com/YOUR-USERNAME/30min`
+- Schedule page (`schedule.html`, also `/schedule/`) — Calendly 30-min Zoom: https://calendly.com/preetd2026/30min
 - Projects: BLOOM (Heinz / Replit Buildathon, top 6; no broken product URL) and Linux Live System Resource Monitor, plus Marketplace Risk attendance with a YouTube link
 - Socials: LinkedIn, Instagram `@pmg.preet`, YouTube `@pmg-preet`
 
