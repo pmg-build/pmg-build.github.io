@@ -123,3 +123,11 @@ body.pj-page { --pj-good: #2f6b4f; --pj-warn: #8a5a00; --pj-info: #3d4f6b; --pj-
   .pj-page .fw-name { min-width: 0; flex-basis: 100%; }
   .pj-page .request .btn { width: 100%; }
 }
+
+/* Optional project media (screenshots + snippet), shown below the tabs. */
+.pj-media { padding: 0 0 clamp(2rem, 4vw, 3rem); }
+.pj-media .pj-shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 0.75rem 0 1.25rem; }
+.pj-media figure { margin: 0; }
+.pj-media img { display: block; width: 100%; height: 260px; object-fit: cover; object-position: top; border: 1px solid var(--line, #ddd); border-radius: 8px; }
+.pj-media figcaption { margin-top: 0.4rem; font-size: 0.85rem; opacity: 0.8; }
+.pj-media pre { margin: 0; padding: 1rem; overflow-x: auto; border: 1px solid var(--line, #ddd); border-radius: 8px; font-size: 0.85rem; line-height: 1.5; }

@@ -95,6 +95,17 @@ for (const p of PROJECTS) {
   if (secKeys.length !== S.sections.length - 0 && !S.sections.every((s) => p[s.id])) fail(`${w}: missing a section`);
 }
 
+// ---------- optional project media ----------
+for (const p of PROJECTS) {
+  if (!p.media) continue;
+  const w = `project "${p.id}".media`;
+  for (const [i, im] of (p.media.images || []).entries()) {
+    if (!isStr(im.src) || /:|^\//.test(im.src) || !fs.existsSync(path.join(ROOT, im.src))) fail(`${w}.images[${i}]: src must be a relative path to an existing file`);
+    if (!isStr(im.alt)) fail(`${w}.images[${i}]: alt text required`);
+  }
+  if (p.media.code && (!isStr(p.media.code.text) || p.media.code.text.split('\n').length > 15)) fail(`${w}.code: text required, max 15 lines`);
+}
+
 // ---------- classes ----------
 const cids = new Set();
 for (const c of CLASSES) {

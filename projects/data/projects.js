@@ -511,5 +511,93 @@ window.PROJECTS = [
         { version: 'End goal', date: '2027-05-14', dateType: 'target', status: 'Goal', title: 'A working live monitor with alerts and key findings' }
       ]
     }
+  },
+
+  {
+    id: 'skeptic-ai',
+    title: 'Skeptic AI — compliance critic for SDLC teams and AI stacks',
+    status: 'In progress',
+    updated: '2026-11-01',
+    summary: 'An ongoing project: a “proposer and skeptic” assistant that checks which team practices really meet the compliance controls a product claims, and guides each member on what fits their SDLC stage.',
+    tags: ['Security compliance', 'AI governance', 'Python', 'Ongoing'],
+    links: [{ label: 'Live demo (sample data)', href: 'assets/projects/skeptic-ai/demo.html' }],
+    proposal: {
+      problem: 'Product teams sign up for several compliance frameworks at once, but the evidence lives in pull requests, design docs, tickets and deployments, and status reports tend to over-claim. AI coding agents now ship changes too, often outside policies written for people.',
+      audience: 'SDLC teams (engineers, security, product and compliance leads) and teams that run AI agents in their delivery pipeline.',
+      approach: 'Ingest the compliance documents a team believes its product implements. A generous proposer maps each team practice to candidate controls, and a skeptic challenges every mapping before anything is reported as meeting a control. Each member then gets a short update and guidance for the SDLC stage they are in.',
+      results: [
+        'Working offline prototype on sample data: 23 sample controls from six framework families checked against 18 sample team and agent activities.',
+        'The skeptic overturned 15 of 28 proposed mappings on the sample data, including 12 of the team’s own claims.',
+        'A per-stage done-gate passes only one of six SDLC stages on the sample data, which shows the team where to focus next.',
+        'Not yet tried with a real team. An LLM-backed critic is designed as a plug-in and is not enabled yet.'
+      ],
+      objectives: [
+        'Report a practice as meeting a control only when the evidence supports it.',
+        'Give every team member a stage-aware view of what to do next.',
+        'Hold AI agents to the same working agreement as people.'
+      ],
+      methodology: [
+        'Split compliance documents into addressable controls.',
+        'Propose mappings from team activity, then challenge each one.',
+        'Gate each SDLC stage and publish per-member updates and a dashboard.'
+      ],
+      timeline: [
+        { phase: 'Offline prototype with sample data and dashboard', window: 'Nov 2026', status: 'Done' },
+        { phase: 'Pilot with a student project team', window: 'Dec 2026 (target)', status: 'Planned' },
+        { phase: 'Optional LLM critic behind the same interface', window: 'Early 2027 (target)', status: 'Planned' },
+        { phase: 'Integration with a team’s tracker and CI', window: 'Spring 2027 (target)', status: 'Planned' }
+      ]
+    },
+    pricing: {
+      visibility: 'private', basis: 'Not set',
+      summary: 'A research and portfolio project. No pricing has been defined.',
+      highlights: ['No commercial offering yet.']
+    },
+    docs: {
+      visibility: 'summary',
+      summary: 'A README, presentation notes and a poster exist for the prototype. Architecture details are available on request.',
+      items: [
+        { title: 'Interactive dashboard on sample data', type: 'Demo', status: 'On request' },
+        { title: 'Architecture and design notes', type: 'Spec', status: 'On request' },
+        { title: 'Presentation notes and poster', type: 'Report', status: 'On request' },
+        { title: 'Pilot evaluation plan', type: 'Checklist', status: 'Planned' }
+      ]
+    },
+    security: {
+      visibility: 'private',
+      summary: 'The prototype runs offline on fictional sample data, with no accounts and no personal data. The rule set and security internals are available on request.',
+      highlights: ['Offline and sample data only.'],
+      frameworks: [
+        { name: 'NIST CSF', level: 'considered' },
+        { name: 'OWASP', level: 'aligned' },
+        { name: 'ISO/IEC 27001', level: 'considered' },
+        { name: 'SOC 2', level: 'considered' },
+        { name: 'NIST SSDF', level: 'aligned' },
+        { name: 'NIST AI RMF', level: 'considered' }
+      ]
+    },
+    revisions: {
+      visibility: 'summary',
+      summary: 'Versioned milestones from the offline prototype to a tool a team uses during delivery.',
+      items: [
+        { version: 'v0.1', date: '2026-11-01', dateType: 'actual', status: 'Done', title: 'Offline prototype: proposer and skeptic loop, stage guidance, done-gate and dashboard' },
+        { version: 'v0.2', date: '2026-12-11', dateType: 'target', status: 'Planned', title: 'Pilot with a student project team' },
+        { version: 'v0.3', date: '2027-02-26', dateType: 'target', status: 'Planned', title: 'Optional LLM critic behind the same interface' },
+        { version: 'End goal', date: '2027-05-14', dateType: 'target', status: 'Goal', title: 'A critic that keeps an SDLC team and its AI agents honest about compliance, stage by stage' }
+      ]
+    },
+    media: {
+      label: 'Demo snapshots',
+      note: 'Sample data only: a fictional team and paraphrased framework excerpts.',
+      images: [
+        { src: 'assets/projects/skeptic-ai/dashboard-overview.png', alt: 'Skeptic AI dashboard: adherence matrix by framework and SDLC stage with a done-gate row', caption: 'Adherence matrix by framework and SDLC stage, with the per-stage done-gate.' },
+        { src: 'assets/projects/skeptic-ai/dashboard-gaps.png', alt: 'Open gaps table with the critic’s reasons', caption: 'Open gaps and evidence requests, each with the critic’s reason.' },
+        { src: 'assets/projects/skeptic-ai/dashboard-mobile.png', alt: 'Dashboard on a phone-width screen', caption: 'The same dashboard at phone width.' }
+      ],
+      code: {
+        caption: 'The done-gate rule (simplified): a stage is never reported as done without checks, or with any red check.',
+        text: 'def stage_gate(stage, verdicts):\n    checks = [v for v in verdicts if v.stage == stage]\n    red = [v for v in checks if v.verdict != "Adheres"]\n    if not checks:\n        return "Empty"     # exit 2\n    if red:\n        return "NotDone"   # exit 1\n    return "Done"          # exit 0'
+      }
+    }
   }
 ];

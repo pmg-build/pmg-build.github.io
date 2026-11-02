@@ -108,6 +108,21 @@
     return '<div role="tabpanel" class="panel" id="panel-' + s.id + '" aria-labelledby="tab-' + s.id + '" tabindex="0" hidden>' + renderers[s.id](project) + '</div>';
   }).join('');
 
+  // Optional media (screenshots and one short code snippet). Rendered after the tabs, outside the
+  // hero/tabs/panels structure, so projects without media are unchanged.
+  function renderMedia(m) {
+    if (!m || !((m.images && m.images.length) || m.code)) return '';
+    var imgs = (m.images || []).map(function (im) {
+      return '<figure class="pj-shot"><a href="' + esc(root + im.src) + '"><img src="' + esc(root + im.src) + '" alt="' + esc(im.alt) + '" loading="lazy"></a>' +
+        (im.caption ? '<figcaption>' + esc(im.caption) + '</figcaption>' : '') + '</figure>';
+    }).join('');
+    var code = m.code ? '<figure class="pj-code"><pre><code>' + esc(m.code.text) + '</code></pre>' +
+      (m.code.caption ? '<figcaption>' + esc(m.code.caption) + '</figcaption>' : '') + '</figure>' : '';
+    return '<section class="pj-media"><div class="container"><p class="section-label">' + esc(m.label || 'Media') + '</p>' +
+      (m.note ? '<p class="fineprint">' + esc(m.note) + '</p>' : '') +
+      (imgs ? '<div class="pj-shots">' + imgs + '</div>' : '') + code + '</div></section>';
+  }
+
   mount.innerHTML =
     '<section class="pj-hero"><div class="container">' +
     '<a class="back" href="' + root + 'projects/"><span aria-hidden="true">←</span> All projects</a>' +
@@ -117,7 +132,7 @@
     project.tags.map(function (t) { return '<span class="pill">' + esc(t) + '</span>'; }).join('') + '</div>' +
     (project.links && project.links.length ? '<p class="hero-links">' + project.links.map(function (l) { return '<a class="btn btn-small" href="' + esc(root + l.href) + '">' + esc(l.label) + '</a>'; }).join(' ') + '</p>' : '') + '</div></section>' +
     '<section class="pj-body"><div class="container"><div class="tabs-wrap"><div class="tabs" role="tablist" aria-label="Project sections">' + tabs + '</div></div>' +
-    '<div class="panels card">' + panels + '</div></div></section>';
+    '<div class="panels card">' + panels + '</div></div></section>' + renderMedia(project.media);
 
   var tabEls = Array.prototype.slice.call(mount.querySelectorAll('[role=tab]'));
   function select(sid, focus, push) {
