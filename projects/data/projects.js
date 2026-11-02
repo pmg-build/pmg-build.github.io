@@ -615,7 +615,8 @@ window.PROJECTS = [
       approach: 'A CMU Management Consulting team built an interactive advisor playbook: a clickable journey map across three phases (Align, Diagnose, Commit) and six stages: Owner goals & retirement destination; Business snapshot & lifecycle context; Value-gap decision gate; Seven value domains (tailwind/headwind/unknown); Root cause & tool match (five whys / fishbone); Prioritized action plan (up to three owned, dated actions). It is grounded in exit-planning (CEPA) value-domain concepts and the firm\'s planning-area tools. My role: led client communication and scheduling with the firm\'s advisors, and drafted and iterated deliverables (an interactive PDF and Word versions) through running revisions.',
       results: [
         'Working draft (Oct 2026) shared with the client, with revisions ongoing.',
-        'First drafts delivered Oct 23, 2026, and the interim presentation was given in class.'
+        'First drafts delivered Oct 23, 2026, and the interim presentation was given in class.',
+        'Next step: Next, I\'m applying the playbook to real work studies: testing the journey map, value-gap gate and root-cause steps against real business-owner cases to validate and refine it.'
       ],
       objectives: [
         'Give advisors a repeatable way to onboard business owners.',
@@ -631,7 +632,7 @@ window.PROJECTS = [
         { phase: 'Proposal and kickoff', window: 'Sep 2026', status: 'Done' },
         { phase: 'Proposal shared with the client', window: 'Oct 6, 2026', status: 'Done' },
         { phase: 'Working draft and first delivery', window: 'Oct 2026', status: 'Done' },
-        { phase: 'Revisions toward a client-ready playbook', window: 'Ongoing', status: 'In progress' }
+        { phase: 'Next step', window: 'Ongoing', status: 'In progress' }
       ]
     },
     pricing: {
@@ -667,7 +668,7 @@ window.PROJECTS = [
         { version: 'v0.2', date: '2026-10-06', dateType: 'actual', status: 'Done', title: 'Proposal shared with the client' },
         { version: 'v0.3', date: '2026-10-19', dateType: 'actual', status: 'Done', title: 'Working draft v1 of the playbook' },
         { version: 'v0.4', date: '2026-10-23', dateType: 'actual', status: 'Done', title: 'First drafts delivered to client advisors' },
-        { version: 'End goal', date: '2026-12-18', dateType: 'target', status: 'Goal', title: 'Client-ready playbook advisors use with business-owner clients' }
+        { version: 'End goal', date: '2026-12-18', dateType: 'target', status: 'Goal', title: 'Next, I\'m applying the playbook to real work studies: testing the journey map, value-gap gate and root-cause steps against real business-owner cases to validate and refine it.' }
       ]
     }
   }
