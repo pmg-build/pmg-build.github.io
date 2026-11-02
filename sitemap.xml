@@ -61,6 +61,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://preet-desai.me/projects/hks-financial-advisor-playbook/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://preet-desai.me/classes/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
