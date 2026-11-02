@@ -25,9 +25,9 @@ window.SITE = {
   contact: {
     schedule: 'schedule.html',       // existing Calendly page on this site (real)
     linkedin: 'https://www.linkedin.com/in/preet-desai26',
-    email: '',                       // <- add your email (e.g. 'you@example.com'); until then a placeholder is shown
+    email: 'preetd2026@gmail.com',
     emailPlaceholder: 'add your email',
-    showEmailPlaceholder: true       // set false to hide the placeholder note once you decide not to publish an email
+    showEmailPlaceholder: false
   }
 };
 
