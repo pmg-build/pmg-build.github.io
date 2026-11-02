@@ -599,5 +599,76 @@ window.PROJECTS = [
         text: 'def stage_gate(stage, verdicts):\n    checks = [v for v in verdicts if v.stage == stage]\n    red = [v for v in checks if v.verdict != "Adheres"]\n    if not checks:\n        return "Empty"     # exit 2\n    if red:\n        return "NotDone"   # exit 1\n    return "Done"          # exit 0'
       }
     }
+  },
+
+  {
+    id: 'hks-financial-advisor-playbook',
+    title: 'HKS Financial: Interactive Advisor Playbook',
+    status: 'In progress',
+    updated: '2026-10-23',
+    summary: 'An interactive advisor playbook for HKS Financial Partners that gives advisors a repeatable way to onboard business owners and decide when a business needs to grow its value for retirement and exit goals.',
+    tags: ['Consulting', 'Strategy', 'Financial planning'],
+    links: [{ label: 'Management Consulting (94-808)', href: 'classes/management-consulting/' }],
+    proposal: {
+      problem: 'Advisors at HKS Financial Partners, a Pittsburgh financial-planning firm, needed a repeatable way to onboard business owners and decide when a business needs to grow its value to fund the owner\'s retirement and exit goals.',
+      audience: 'Advisors at HKS Financial Partners who onboard business-owner clients.',
+      approach: 'A CMU Management Consulting team built an interactive advisor playbook: a clickable journey map across three phases (Align, Diagnose, Commit) and six stages: Owner goals & retirement destination; Business snapshot & lifecycle context; Value-gap decision gate; Seven value domains (tailwind/headwind/unknown); Root cause & tool match (five whys / fishbone); Prioritized action plan (up to three owned, dated actions). It is grounded in exit-planning (CEPA) value-domain concepts and the firm\'s planning-area tools. My role: led client communication and scheduling with the firm\'s advisors, and drafted and iterated deliverables (an interactive PDF and Word versions) through running revisions.',
+      results: [
+        'Working draft (Oct 2026) shared with the client, with revisions ongoing.',
+        'First drafts delivered Oct 23, 2026, and the interim presentation was given in class.'
+      ],
+      objectives: [
+        'Give advisors a repeatable way to onboard business owners.',
+        'Decide when a business needs to grow its value to fund retirement and exit goals.',
+        'Leave each engagement with a short list of owned, dated actions.'
+      ],
+      methodology: [
+        'Map the advisor journey across Align, Diagnose, and Commit.',
+        'Ground the stages in exit-planning value-domain concepts and the firm\'s planning-area tools.',
+        'Draft the playbook and revise it with the firm\'s advisors.'
+      ],
+      timeline: [
+        { phase: 'Proposal and kickoff', window: 'Sep 2026', status: 'Done' },
+        { phase: 'Proposal shared with the client', window: 'Oct 6, 2026', status: 'Done' },
+        { phase: 'Working draft and first delivery', window: 'Oct 2026', status: 'Done' },
+        { phase: 'Revisions toward a client-ready playbook', window: 'Ongoing', status: 'In progress' }
+      ]
+    },
+    pricing: {
+      visibility: 'private', basis: 'Not set',
+      summary: 'Pricing is not published. Figures and commercial terms are available on request.',
+      highlights: ['No public price list.']
+    },
+    docs: {
+      visibility: 'private',
+      summary: 'The playbook and related working files are available on request.',
+      items: [
+        { title: 'Interactive advisor playbook', type: 'Guide', status: 'On request' },
+        { title: 'Playbook worksheets', type: 'Workbook', status: 'On request' },
+        { title: 'Planning-area tool library', type: 'Spec', status: 'On request' }
+      ]
+    },
+    security: {
+      visibility: 'private',
+      summary: 'Security notes for this engagement are available on request.',
+      highlights: ['No security detail is published on this page.'],
+      frameworks: [
+        { name: 'NIST CSF', level: 'considered' },
+        { name: 'OWASP', level: 'not-applicable' },
+        { name: 'ISO/IEC 27001', level: 'considered' },
+        { name: 'SOC 2', level: 'not-applicable' }
+      ]
+    },
+    revisions: {
+      visibility: 'summary',
+      summary: 'Milestones from the September proposal through the October drafts. The September day is the first of the month because only the month was recorded. The end-goal date is a target placeholder.',
+      items: [
+        { version: 'v0.1', date: '2026-09-01', dateType: 'actual', status: 'Done', title: 'Proposal and kickoff (September 2026)' },
+        { version: 'v0.2', date: '2026-10-06', dateType: 'actual', status: 'Done', title: 'Proposal shared with the client' },
+        { version: 'v0.3', date: '2026-10-19', dateType: 'actual', status: 'Done', title: 'Working draft v1 of the playbook' },
+        { version: 'v0.4', date: '2026-10-23', dateType: 'actual', status: 'Done', title: 'First drafts delivered to client advisors' },
+        { version: 'End goal', date: '2026-12-18', dateType: 'target', status: 'Goal', title: 'Client-ready playbook advisors use with business-owner clients' }
+      ]
+    }
   }
 ];

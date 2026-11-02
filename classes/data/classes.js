@@ -81,7 +81,7 @@ window.CLASSES = [
         'Run structured go/no-go reviews on my own product ideas.'
       ]
     },
-    relatedProjects: ['contractor-quote-workbook', 'wireless-power-mini-kit']
+    relatedProjects: ['contractor-quote-workbook', 'wireless-power-mini-kit', 'hks-financial-advisor-playbook']
   },
   {
     id: 'economics', code: '', title: 'Economics', status: 'Completed', term: '',
