@@ -12,7 +12,7 @@ body.pj-page { --pj-good: #2f6b4f; --pj-warn: #8a5a00; --pj-info: #3d4f6b; --pj-
 
 .pj-page .pill { display: inline-flex; align-items: center; padding: 0.15rem 0.7rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--muted); font-size: 0.82rem; font-weight: 600; }
 .pj-page .badge { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.15rem 0.75rem; border-radius: 999px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.03em; border: 1px solid currentColor; background: var(--surface); white-space: nowrap; }
-.pj-page .badge-prototype, .pj-page .badge-completed { color: var(--pj-good); }
+.pj-page .badge-prototype, .pj-page .badge-completed, .pj-page .badge-live { color: var(--pj-good); }
 .pj-page .badge-in-progress { color: var(--pj-warn); }
 .pj-page .badge-concept { color: var(--pj-info); }
 
@@ -36,6 +36,7 @@ body.pj-page { --pj-good: #2f6b4f; --pj-warn: #8a5a00; --pj-info: #3d4f6b; --pj-
 .pj-page .tag-row { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .pj-page .tag-row .skill { padding: 0.05rem 0.6rem; border: 1px solid var(--line); border-radius: 999px; font-size: 0.8rem; color: var(--muted); }
 .pj-page .card-link { margin-top: auto; padding-top: 0.4rem; font-weight: 600; }
+.pj-page .project-card > a.btn.card-link { align-self: flex-start; }
 
 /* ---- tabs ---- */
 .pj-page .tabs-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-bottom: 1px solid var(--line); margin-bottom: 1.25rem; }
