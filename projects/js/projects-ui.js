@@ -36,16 +36,24 @@
   var q = /[?&]status=([^&]+)/.exec(location.search);
   if (q && S.statuses.indexOf(decodeURIComponent(q[1])) > -1) current = decodeURIComponent(q[1]);
 
+  var lectureCard = '<article class="card project-card" data-status="Live">' +
+    '<div class="project-card-top"><span class="badge badge-live"><span aria-hidden="true">●</span> Live</span></div>' +
+    '<h3>Lecture Visualizer</h3>' +
+    '<p class="project-summary">Upload Otter.ai lecture notes and get key-point cards with auto-chosen diagrams (process, cause-and-effect, comparison, timeline, concept map), each tied to its timestamped quote, with an optional Gemini fact-check.</p>' +
+    '<a class="btn btn-primary card-link" href="https://lecture-visualizer.vercel.app" target="_blank" rel="noopener">Open the app</a></article>';
+
   function draw() {
     var list = sorted().filter(function (p) { return current === 'All' || p.status === current; });
-    grid.innerHTML = list.map(card).join('');
-    count.textContent = 'Showing ' + list.length + ' of ' + window.PROJECTS.length + ' projects' + (current === 'All' ? '' : ' · ' + current);
+    var showLecture = current === 'All';
+    grid.innerHTML = (showLecture ? lectureCard : '') + list.map(card).join('');
+    var shown = list.length + (showLecture ? 1 : 0);
+    count.textContent = 'Showing ' + shown + ' of ' + (window.PROJECTS.length + 1) + ' projects' + (current === 'All' ? '' : ' · ' + current);
     Array.prototype.forEach.call(filters.querySelectorAll('button'), function (b) {
       b.setAttribute('aria-pressed', String(b.getAttribute('data-status') === current));
     });
   }
   filters.innerHTML = ['All'].concat(S.statuses).map(function (s) {
-    var n = s === 'All' ? window.PROJECTS.length : window.PROJECTS.filter(function (p) { return p.status === s; }).length;
+    var n = s === 'All' ? window.PROJECTS.length + 1 : window.PROJECTS.filter(function (p) { return p.status === s; }).length;
     return '<button type="button" class="chip" data-status="' + esc(s) + '" aria-pressed="false">' + esc(s) + ' <span class="chip-n">' + n + '</span></button>';
   }).join('');
   filters.addEventListener('click', function (e) {
